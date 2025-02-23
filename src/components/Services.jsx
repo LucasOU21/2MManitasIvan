@@ -4,22 +4,40 @@ import ServiceDetail from './ServiceDetail';
 
 const services = [
   {
-    title: "Montaje de Muebles",
-    description: "Instalación profesional de todo tipo de muebles",
-    image: "/api/placeholder/400/300",
-    details: "Especialistas en montaje de todo tipo de muebles: armarios, camas, estanterías, escritorios y más. Servicio rápido y profesional con garantía de satisfacción."
+    title: "Carpintería",
+    description: "Soluciones profesionales en trabajos de madera",
+    image: "src/assets/carpinteria1.png",
+    details: "Expertos en instalación y reparación de todo tipo de elementos de carpintería. Trabajos de calidad en puertas, ventanas, muebles y estructuras de madera."
   },
   {
-    title: "Reparaciones Eléctricas",
-    description: "Soluciones seguras para problemas eléctricos",
+    title: "Electricidad",
+    description: "Servicios integrales de instalación eléctrica",
     image: "/api/placeholder/400/300",
-    details: "Instalación y reparación de enchufes, interruptores, lámparas y todo tipo de problemas eléctricos. Trabajo certificado y seguro."
+    details: "Instalaciones eléctricas completas, reparaciones, revisiones y certificaciones. Trabajos seguros y realizados por profesionales cualificados."
   },
   {
-    title: "Mantenimiento General",
-    description: "Cuidado integral de tu hogar u oficina",
+    title: "Albañilería",
+    description: "Servicios profesionales de construcción y reforma",
     image: "/api/placeholder/400/300",
-    details: "Servicios completos de mantenimiento incluyendo pintura, reparaciones menores, instalación de accesorios y más."
+    details: "Trabajos de albañilería para reformas integrales, reparaciones, tabiquería, revestimientos y todo tipo de construcciones menores."
+  },
+  {
+    title: "Plato de Ducha",
+    description: "Instalación y reforma de platos de ducha",
+    image: "/api/placeholder/400/300",
+    details: "Especialistas en instalación, cambio y reforma de platos de ducha. Trabajos de alta calidad con materiales modernos y diseños personalizados."
+  },
+  {
+    title: "Tarima",
+    description: "Instalación y mantenimiento de tarimas",
+    image: "/api/placeholder/400/300",
+    details: "Colocación de tarimas de diversos materiales, reparación, pulido y renovación. Soluciones para todo tipo de suelos de madera."
+  },
+  {
+    title: "Pladur",
+    description: "Trabajos de construcción en pladur",
+    image: "/api/placeholder/400/300",
+    details: "Instalación de tabiques, techos, trasdosados y todo tipo de trabajos con pladur. Soluciones para dividir, insonorizar y mejorar espacios interiores."
   },
   {
     title: "Mudanzas",
@@ -28,28 +46,22 @@ const services = [
     details: "Ofrecemos servicios completos de mudanza. Incluye desmontaje, embalaje profesional, transporte seguro y montaje en el nuevo domicilio."
   },
   {
-    title: "Recogida de Escombros",
-    description: "Limpieza y gestión de residuos",
-    image: "/api/placeholder/400/300",
-    details: "Servicio profesional de recogida y gestión de escombros. Garantizamos una gestión responsable y ecológica de todos los residuos."
-  },
-  {
     title: "Pintura",
     description: "Servicios profesionales de pintura",
     image: "/api/placeholder/400/300",
     details: "Trabajos de pintura interior y exterior, con acabados de alta calidad y uso de materiales ecológicos."
   },
   {
+    title: "Recogida de Escombros",
+    description: "Limpieza y gestión de residuos",
+    image: "/api/placeholder/400/300",
+    details: "Servicio profesional de recogida y gestión de escombros. Garantizamos una gestión responsable y ecológica de todos los residuos."
+  },
+  {
     title: "Fontanería",
     description: "Soluciones en fontanería",
     image: "/api/placeholder/400/300",
     details: "Reparación e instalación de grifos, tuberías, desagües y todo tipo de sistemas de agua. Servicio de emergencia disponible."
-  },
-  {
-    title: "Jardinería",
-    description: "Mantenimiento de jardines",
-    image: "/api/placeholder/400/300",
-    details: "Cuidado completo de jardines, poda, plantación y diseño paisajístico. Mantenimiento regular disponible."
   }
 ];
 
