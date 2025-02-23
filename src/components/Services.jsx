@@ -2,11 +2,32 @@ import React, { useState, useRef } from 'react';
 import { ChevronRight, ChevronLeft, ChevronRightCircle } from 'lucide-react';
 import ServiceDetail from './ServiceDetail';
 
+
+import carpinteriaImg1 from '../assets/carpinteria1.png';
+import carpinteriaImg2 from '../assets/carpinteria2.png';
+import carpinteriaImg3 from '../assets/carpinteria3.png';
+import electricidadImg1 from '../assets/electricidad.jpg';
+import electricidadImg2 from '../assets/electricidad2.jpg';
+import electricidadImg3 from '../assets/electricidad3.jpg';
+import albanileriaImg1 from '../assets/Albanileria1.jpg';
+import albanileriaImg2 from '../assets/Albanileria2.jpg';
+import platoDuchaImg1 from '../assets/platoducha1.jpg';
+import platoDuchaImg2 from '../assets/platoducha2.jpg';
+import tarimaImg1 from '../assets/Tarima1.jpg';
+import tarimaImg2 from '../assets/Tarima2.jpg';
+import pladurImg1 from '../assets/pladur1.jpg';
+import mudanzasImg1 from '../assets/mudanza1.jpg';
+import pinturaImg1 from '../assets/pintura1.jpg';
+import recogidaEscombrosImg from '../assets/recogida-escombros.jpg';
+import fontaneriaImg1 from '../assets/fontaneria1.jpg';
+import fontaneriaImg2 from '../assets/fontaneria2.jpg';
+import fontaneriaImg3 from '../assets/fontaneria3.jpg';
+
 const services = [
   {
     title: "Carpintería",
     description: "Soluciones profesionales en trabajos de madera",
-    image: "src/assets/carpinteria1.png",
+    image: carpinteria1.png,
     details: "Expertos en instalación y reparación de todo tipo de elementos de carpintería. Trabajos de calidad en puertas, ventanas, muebles y estructuras de madera."
   },
   {
