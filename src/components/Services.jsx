@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { ChevronRight, ChevronLeft, ChevronRightCircle } from 'lucide-react';
 import ServiceDetail from './ServiceDetail';
 
-
+// Use relative paths starting with ../
 import carpinteriaImg1 from '../assets/carpinteria1.png';
 import carpinteriaImg2 from '../assets/carpinteria2.png';
 import carpinteriaImg3 from '../assets/carpinteria3.png';
@@ -18,7 +18,6 @@ import tarimaImg2 from '../assets/Tarima2.jpg';
 import pladurImg1 from '../assets/pladur1.jpg';
 import mudanzasImg1 from '../assets/mudanza1.jpg';
 import pinturaImg1 from '../assets/pintura1.jpg';
-import recogidaEscombrosImg from '../assets/recogida-escombros.jpg';
 import fontaneriaImg1 from '../assets/fontaneria1.jpg';
 import fontaneriaImg2 from '../assets/fontaneria2.jpg';
 import fontaneriaImg3 from '../assets/fontaneria3.jpg';
@@ -27,61 +26,64 @@ const services = [
   {
     title: "Carpintería",
     description: "Soluciones profesionales en trabajos de madera",
-    image: carpinteria1.png,
+    image: carpinteriaImg1,
     details: "Expertos en instalación y reparación de todo tipo de elementos de carpintería. Trabajos de calidad en puertas, ventanas, muebles y estructuras de madera."
   },
   {
     title: "Electricidad",
     description: "Servicios integrales de instalación eléctrica",
-    image: "/api/placeholder/400/300",
+    images: [electricidadImg1, electricidadImg2, electricidadImg3],
+    image: electricidadImg1,
     details: "Instalaciones eléctricas completas, reparaciones, revisiones y certificaciones. Trabajos seguros y realizados por profesionales cualificados."
   },
   {
     title: "Albañilería",
     description: "Servicios profesionales de construcción y reforma",
-    image: "/api/placeholder/400/300",
+    images: [albanileriaImg1, albanileriaImg2],
+    image: albanileriaImg1,
     details: "Trabajos de albañilería para reformas integrales, reparaciones, tabiquería, revestimientos y todo tipo de construcciones menores."
   },
   {
     title: "Plato de Ducha",
     description: "Instalación y reforma de platos de ducha",
-    image: "/api/placeholder/400/300",
+    images: [platoDuchaImg1, platoDuchaImg2],
+    image: platoDuchaImg1,
     details: "Especialistas en instalación, cambio y reforma de platos de ducha. Trabajos de alta calidad con materiales modernos y diseños personalizados."
   },
   {
     title: "Tarima",
     description: "Instalación y mantenimiento de tarimas",
-    image: "/api/placeholder/400/300",
+    images: [tarimaImg1, tarimaImg2],
+    image: tarimaImg1,
     details: "Colocación de tarimas de diversos materiales, reparación, pulido y renovación. Soluciones para todo tipo de suelos de madera."
   },
   {
     title: "Pladur",
     description: "Trabajos de construcción en pladur",
-    image: "/api/placeholder/400/300",
+    images: [pladurImg1],
+    image: pladurImg1,
     details: "Instalación de tabiques, techos, trasdosados y todo tipo de trabajos con pladur. Soluciones para dividir, insonorizar y mejorar espacios interiores."
   },
   {
     title: "Mudanzas",
     description: "Servicio profesional de mudanzas",
-    image: "/api/placeholder/400/300",
+    images: [mudanzasImg1],
+    image: mudanzasImg1,
     details: "Ofrecemos servicios completos de mudanza. Incluye desmontaje, embalaje profesional, transporte seguro y montaje en el nuevo domicilio."
   },
   {
     title: "Pintura",
     description: "Servicios profesionales de pintura",
-    image: "/api/placeholder/400/300",
+    images: [pinturaImg1],
+    image: pinturaImg1,
     details: "Trabajos de pintura interior y exterior, con acabados de alta calidad y uso de materiales ecológicos."
   },
   {
-    title: "Recogida de Escombros",
-    description: "Limpieza y gestión de residuos",
-    image: "/api/placeholder/400/300",
-    details: "Servicio profesional de recogida y gestión de escombros. Garantizamos una gestión responsable y ecológica de todos los residuos."
-  },
-  {
+
     title: "Fontanería",
     description: "Soluciones en fontanería",
-    image: "/api/placeholder/400/300",
+    images: [fontaneriaImg1, fontaneriaImg2, fontaneriaImg3],
+    image: fontaneriaImg1,
     details: "Reparación e instalación de grifos, tuberías, desagües y todo tipo de sistemas de agua. Servicio de emergencia disponible."
   }
 ];

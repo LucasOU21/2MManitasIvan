@@ -4,14 +4,18 @@ import { Menu, X, Phone } from 'lucide-react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
-
   return (
     <>
       <header className="bg-teal-500 text-white">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
-            <div className="flex items-center space-x-4">
-            <h1 className="text-2xl font-bold tracking-wider">ECOMANITAS</h1>
+            <div className="flex items-center space-x-4 h-25 overflow-hidden">
+              <img 
+                src="/src/assets/LogoManitas.png
+                " 
+                alt="2mmanitas madrid" 
+                className="max-h-24 w-auto object-contain" 
+              />
             </div>
             
             {/* Desktop Navigation */}
@@ -20,7 +24,7 @@ const Header = () => {
               <a href="#about-us" className="hover:text-teal-200">Sobre Nosotros</a>
               <a href="#contact" className="hover:text-teal-200">Contacto</a>
               <button className="bg-white text-teal-500 px-6 py-2 rounded-full font-medium hover:bg-teal-50">
-                653 333 139
+              625791624
               </button>
             </nav>
 
