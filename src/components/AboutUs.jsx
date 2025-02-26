@@ -15,7 +15,7 @@ const AboutUs = () => {
     },
     {
       icon: <Award className="w-6 h-6" />,
-      number: "5",
+      number: "20",
       label: "Años de Experiencia"
     },
     {
@@ -36,7 +36,7 @@ const AboutUs = () => {
               Sobre Nosotros
             </h1>
             <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-              En EcoManitas, nuestra pasión es simplificar la vida de nuestros clientes 
+              En 2MManitasMadrid, nuestra pasión es simplificar la vida de nuestros clientes 
               mediante servicios de mantenimiento y reparación integrales y sostenibles. 
               Fundada en Madrid, hemos crecido desde una pequeña iniciativa local hasta 
               convertirnos en un referente en servicios profesionales de mantenimiento.

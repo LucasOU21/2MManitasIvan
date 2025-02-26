@@ -22,9 +22,8 @@ const Header = () => {
             <nav className="hidden md:flex items-center space-x-8">
               <a href="#services" className="hover:text-teal-200">Servicios</a>
               <a href="#about-us" className="hover:text-teal-200">Sobre Nosotros</a>
-              <a href="#contact" className="hover:text-teal-200">Contacto</a>
               <button className="bg-white text-teal-500 px-6 py-2 rounded-full font-medium hover:bg-teal-50">
-              625791624
+              625 79 16 24
               </button>
             </nav>
 

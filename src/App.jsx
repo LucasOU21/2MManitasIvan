@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import Services from './components/Services'
 import AboutUs from './components/AboutUs'
 import Footer from './components/Footer'
+import FloatingWhatsApp from './components/FloatingWhatsApp'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Services />
       <AboutUs />
       <Footer />
+      <FloatingWhatsApp />
     </div>
   )
 }

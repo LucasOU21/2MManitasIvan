@@ -27,64 +27,63 @@ const services = [
     title: "Carpintería",
     description: "Soluciones profesionales en trabajos de madera",
     image: carpinteriaImg1,
-    details: "Expertos en instalación y reparación de todo tipo de elementos de carpintería. Trabajos de calidad en puertas, ventanas, muebles y estructuras de madera."
+    details: "Servicio completo de carpintería para todo tipo de necesidades. Instalamos y reparamos puertas, ventanas, armarios empotrados y muebles a medida. Trabajamos con diversos materiales (madera maciza, MDF, contrachapado) y ofrecemos restauración de muebles antiguos. Todos nuestros trabajos están garantizados y utilizamos materiales sostenibles de primera calidad."
   },
   {
     title: "Electricidad",
     description: "Servicios integrales de instalación eléctrica",
     images: [electricidadImg1, electricidadImg2, electricidadImg3],
     image: electricidadImg1,
-    details: "Instalaciones eléctricas completas, reparaciones, revisiones y certificaciones. Trabajos seguros y realizados por profesionales cualificados."
+    details: "Electricistas certificados para instalaciones completas, reparación de averías y sustitución de cuadros eléctricos. Ofrecemos soluciones modernas como iluminación LED de bajo consumo y domótica. Realizamos revisiones de seguridad, certificados eléctricos y boletines para compañías. Todos nuestros trabajos cumplen con la normativa vigente para garantizar su seguridad."
   },
   {
     title: "Albañilería",
     description: "Servicios profesionales de construcción y reforma",
     images: [albanileriaImg1, albanileriaImg2],
     image: albanileriaImg1,
-    details: "Trabajos de albañilería para reformas integrales, reparaciones, tabiquería, revestimientos y todo tipo de construcciones menores."
+    details: "Servicios completos de albañilería para pequeñas y medianas reformas. Realizamos tabiquería, suelos cerámicos, reparación de humedades y grietas, alicatado de baños y cocinas. Nos especializamos en reforma integral de baños y cocinas, desde el diseño hasta la ejecución final. Utilizamos técnicas modernas y materiales de calidad con presupuestos sin compromiso."
   },
   {
     title: "Plato de Ducha",
     description: "Instalación y reforma de platos de ducha",
     images: [platoDuchaImg1, platoDuchaImg2],
     image: platoDuchaImg1,
-    details: "Especialistas en instalación, cambio y reforma de platos de ducha. Trabajos de alta calidad con materiales modernos y diseños personalizados."
+    details: "Especialistas en instalación y sustitución de platos de ducha. Servicio completo que incluye: retirada de bañera o plato antiguo, preparación e impermeabilización, instalación del nuevo plato, colocación de mampara y conexión de desagües. Trabajamos con diversos materiales y ofrecemos soluciones a medida, incluyendo instalaciones a ras de suelo para mayor accesibilidad."
   },
   {
     title: "Tarima",
     description: "Instalación y mantenimiento de tarimas",
     images: [tarimaImg1, tarimaImg2],
     image: tarimaImg1,
-    details: "Colocación de tarimas de diversos materiales, reparación, pulido y renovación. Soluciones para todo tipo de suelos de madera."
+    details: "Expertos en instalación y mantenimiento de tarimas. Ofrecemos: colocación de tarima flotante y maciza, tarimas para exteriores, lijado y barnizado, reparación de tablas dañadas y nivelación de superficies. Trabajamos con maderas naturales y composites para exteriores, con tratamientos antihumedad y protección UV. Asesoramiento personalizado para elegir el material ideal para su espacio."
   },
   {
     title: "Pladur",
     description: "Trabajos de construcción en pladur",
     images: [pladurImg1],
     image: pladurImg1,
-    details: "Instalación de tabiques, techos, trasdosados y todo tipo de trabajos con pladur. Soluciones para dividir, insonorizar y mejorar espacios interiores."
+    details: "Especialistas en estructuras e instalaciones de pladur. Realizamos tabiques divisorios, falsos techos decorativos, muebles a medida y trasdosados para aislamiento térmico y acústico. Utilizamos diferentes tipos de placas según necesidades: estándar, hidrófugas, ignífugas o acústicas. Nuestros trabajos incluyen tratamiento de juntas, masillado y preparación para pintura, con materiales certificados y acabados perfectos."
   },
   {
     title: "Mudanzas",
     description: "Servicio profesional de mudanzas",
     images: [mudanzasImg1],
     image: mudanzasImg1,
-    details: "Ofrecemos servicios completos de mudanza. Incluye desmontaje, embalaje profesional, transporte seguro y montaje en el nuevo domicilio."
+    details: "Servicio de mudanzas completo para particulares y empresas. Ofrecemos: desmontaje profesional, embalaje seguro de objetos frágiles, transporte con vehículos adaptados, montaje en el nuevo domicilio y colocación según sus indicaciones. Disponemos de materiales de calidad y ofrecemos servicios complementarios como almacenaje temporal. Todos nuestros operarios están formados en manipulación de cargas."
   },
   {
     title: "Pintura",
     description: "Servicios profesionales de pintura",
     images: [pinturaImg1],
     image: pinturaImg1,
-    details: "Trabajos de pintura interior y exterior, con acabados de alta calidad y uso de materiales ecológicos."
+    details: "Servicio de pintura interior y exterior. Realizamos pintura de paredes y techos, esmalte de puertas y ventanas, técnicas decorativas y eliminación de gotelé. Trabajos en exteriores con tratamientos impermeabilizantes y protección contra humedad. Utilizamos pinturas ecológicas, antimoho y antibacterianas. Preparamos adecuadamente las superficies (limpieza, masillado, lijado) para garantizar acabados duraderos."
   },
   {
-
     title: "Fontanería",
     description: "Soluciones en fontanería",
     images: [fontaneriaImg1, fontaneriaImg2, fontaneriaImg3],
     image: fontaneriaImg1,
-    details: "Reparación e instalación de grifos, tuberías, desagües y todo tipo de sistemas de agua. Servicio de emergencia disponible."
+    details: "Fontaneros profesionales para instalaciones y reparaciones. Servicios de instalación y reparación de grifería, cisternas y sanitarios, detección de fugas, mantenimiento de calentadores, renovación de tuberías y desatascos. Trabajamos con materiales de primera calidad y ofrecemos servicio de emergencia 24/7. Realizamos revisiones preventivas para evitar problemas futuros y proporcionamos presupuestos sin compromiso."
   }
 ];
 
