@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
+import logoImage from '../assets/LogoManitas.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,8 +12,7 @@ const Header = () => {
           <div className="flex items-center justify-between py-4">
             <div className="flex items-center space-x-4 h-25 overflow-hidden">
               <img 
-                src="/src/assets/LogoManitas.png
-                " 
+                src={logoImage}
                 alt="2mmanitas madrid" 
                 className="max-h-24 w-auto object-contain" 
               />
