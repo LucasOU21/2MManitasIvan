@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Users, Clock, Sparkles } from 'lucide-react';
+import { Award, Users, ThumbsUp, Sparkles } from 'lucide-react';
 
 const AboutUs = () => {
   const stats = [
@@ -9,9 +9,9 @@ const AboutUs = () => {
       label: "Clientes Satisfechos"
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      number: "24/7",
-      label: "Disponibilidad"
+      icon: <ThumbsUp className="w-6 h-6" />,
+      number: "95%",
+      label: "Tasa de Recomendación"
     },
     {
       icon: <Award className="w-6 h-6" />,

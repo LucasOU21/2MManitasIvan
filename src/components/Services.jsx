@@ -25,16 +25,16 @@ import fontaneriaImg3 from '../assets/fontaneria3.jpg';
 const services = [
   {
     title: "Carpintería",
-    description: "Soluciones profesionales en trabajos de madera",
+    description: "Montaje de muebles y cocinas",
     image: carpinteriaImg1,
-    details: "Servicio completo de carpintería para todo tipo de necesidades. Instalamos y reparamos puertas, ventanas, armarios empotrados y muebles a medida. Trabajamos con diversos materiales (madera maciza, MDF, contrachapado) y ofrecemos restauración de muebles antiguos. Todos nuestros trabajos están garantizados y utilizamos materiales sostenibles de primera calidad."
+    details: "Servicio especializado en montaje de cocinas y muebles de Ikea, Leroy Merlin y otras tiendas. Instalamos con precisión y profesionalidad todo tipo de mobiliario, asegurando un ajuste perfecto y máxima estabilidad. Nuestro equipo cuenta con las herramientas y experiencia necesarias para realizar un montaje rápido y eficiente, ahorrándole tiempo y complicaciones."
   },
   {
     title: "Electricidad",
-    description: "Servicios integrales de instalación eléctrica",
+    description: "Servicios básicos de instalación eléctrica",
     images: [electricidadImg1, electricidadImg2, electricidadImg3],
     image: electricidadImg1,
-    details: "Electricistas certificados para instalaciones completas, reparación de averías y sustitución de cuadros eléctricos. Ofrecemos soluciones modernas como iluminación LED de bajo consumo y domótica. Realizamos revisiones de seguridad, certificados eléctricos y boletines para compañías. Todos nuestros trabajos cumplen con la normativa vigente para garantizar su seguridad."
+    details: "Servicios básicos de electricidad para el hogar. Nos especializamos en instalación y reparación de interruptores, bombillas, sistemas de iluminación LED y otros componentes eléctricos esenciales. Realizamos trabajos sencillos pero fundamentales para el buen funcionamiento y seguridad de su hogar, con la calidad y profesionalidad que caracterizan todos nuestros servicios."
   },
   {
     title: "Albañilería",
@@ -52,10 +52,10 @@ const services = [
   },
   {
     title: "Tarima",
-    description: "Instalación y mantenimiento de tarimas",
+    description: "Instalación de tarimas y rodapiés",
     images: [tarimaImg1, tarimaImg2],
     image: tarimaImg1,
-    details: "Expertos en instalación y mantenimiento de tarimas. Ofrecemos: colocación de tarima flotante y maciza, tarimas para exteriores, lijado y barnizado, reparación de tablas dañadas y nivelación de superficies. Trabajamos con maderas naturales y composites para exteriores, con tratamientos antihumedad y protección UV. Asesoramiento personalizado para elegir el material ideal para su espacio."
+    details: "Instalación profesional de tarimas flotantes, macizas y rodapiés para todo tipo de espacios. Trabajamos con diversos materiales para adaptarnos a sus necesidades y presupuesto. Nuestro servicio incluye la preparación de la superficie, colocación de material aislante, instalación precisa de la tarima y acabado con rodapiés a juego. Garantizamos un resultado duradero, estético y de calidad."
   },
   {
     title: "Pladur",
@@ -66,10 +66,10 @@ const services = [
   },
   {
     title: "Mudanzas",
-    description: "Servicio profesional de mudanzas",
+    description: "Servicio de mudanzas para particulares",
     images: [mudanzasImg1],
     image: mudanzasImg1,
-    details: "Servicio de mudanzas completo para particulares y empresas. Ofrecemos: desmontaje profesional, embalaje seguro de objetos frágiles, transporte con vehículos adaptados, montaje en el nuevo domicilio y colocación según sus indicaciones. Disponemos de materiales de calidad y ofrecemos servicios complementarios como almacenaje temporal. Todos nuestros operarios están formados en manipulación de cargas."
+    details: "Servicio de mudanzas exclusivamente para particulares. Ofrecemos un servicio completo que incluye embalaje, transporte y desembalaje de sus pertenencias con el máximo cuidado. Nuestro equipo se encarga de todo el proceso, utilizando materiales de protección adecuados y técnicas profesionales para garantizar que todos sus objetos lleguen en perfecto estado a su nuevo hogar."
   },
   {
     title: "Pintura",
@@ -83,7 +83,7 @@ const services = [
     description: "Soluciones en fontanería",
     images: [fontaneriaImg1, fontaneriaImg2, fontaneriaImg3],
     image: fontaneriaImg1,
-    details: "Fontaneros profesionales para instalaciones y reparaciones. Servicios de instalación y reparación de grifería, cisternas y sanitarios, detección de fugas, mantenimiento de calentadores, renovación de tuberías y desatascos. Trabajamos con materiales de primera calidad y ofrecemos servicio de emergencia 24/7. Realizamos revisiones preventivas para evitar problemas futuros y proporcionamos presupuestos sin compromiso."
+    details: "Fontaneros profesionales para instalaciones y reparaciones. Servicios de instalación y reparación de grifería, cisternas y sanitarios, detección de fugas, mantenimiento de calentadores, renovación de tuberías y desatascos. Trabajamos con materiales de primera calidad y proporcionamos presupuestos sin compromiso para solucionar sus problemas de fontanería de forma eficiente y duradera."
   }
 ];
 
