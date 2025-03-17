@@ -7,4 +7,8 @@ export default defineConfig({
   css: {
     postcss: './postcss.config.js',
   },
+  server: {
+    host: '0.0.0.0', // This exposes the dev server to external connections
+  },
 })
+

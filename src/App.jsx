@@ -2,11 +2,12 @@ import React, { useEffect } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Services from './components/Services'
+import Reviews from './components/Reviews'
 import AboutUs from './components/AboutUs'
 import Footer from './components/Footer'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
-import GoogleAdsTracker from './components/GoogleAdsTracker' // Import the tracker
-import CookieConsentBanner from './components/CookieConsentBanner' // Import cookie consent
+import GoogleAdsTracker from './components/GoogleAdsTracker'
+import CookieConsentBanner from './components/CookieConsentBanner'
 
 function App() {
   // Initialize Google Ads tracking
@@ -21,10 +22,11 @@ function App() {
       <Hero />
       <Services />
       <AboutUs />
+      <Reviews /> {/* Reviews section after AboutUs */}
       <Footer />
       <FloatingWhatsApp />
-      <GoogleAdsTracker /> {/* Add the tracker component */}
-      <CookieConsentBanner /> {/* Add cookie consent banner */}
+      <GoogleAdsTracker />
+      <CookieConsentBanner />
     </div>
   )
 }
