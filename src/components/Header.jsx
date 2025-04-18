@@ -7,18 +7,17 @@ const Header = () => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   
-  // List of services for the dropdown
+  // Full list of services for the dropdown
   const services = [
+    { title: "Carpintería", path: "/carpinteria" },
+    { title: "Electricidad", path: "/electricidad" },
     { title: "Mudanzas", path: "/mudanzas" },
-    // Other services - uncomment as they become available
-    // { title: "Carpintería", path: "/carpinteria" },
-    // { title: "Electricidad", path: "/electricidad" },
-    // { title: "Albañilería", path: "/albanileria" },
-    // { title: "Plato de Ducha", path: "/plato-ducha" },
-    // { title: "Tarima", path: "/tarima" },
-    // { title: "Pladur", path: "/pladur" },
-    // { title: "Pintura", path: "/pintura" },
-    // { title: "Fontanería", path: "/fontaneria" }
+    { title: "Albañilería", path: "/albanileria" },
+    { title: "Plato de Ducha", path: "/plato-ducha" },
+    { title: "Tarima", path: "/tarima" },
+    { title: "Pladur", path: "/pladur" },
+    { title: "Pintura", path: "/pintura" },
+    { title: "Fontanería", path: "/fontaneria" }
   ];
   
   // Check if we're on the home page or a service page
@@ -84,7 +83,7 @@ const Header = () => {
                 )}
               </div>
               
-              {/* Use conditional links based on current page */}
+              {/* Main page section links */}
               <a 
                 href={isHomePage ? "#about-us" : "/#about-us"} 
                 className="hover:text-teal-200"
@@ -116,7 +115,7 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Mobile Menu - Simple Version with No Nested Dropdown */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-teal-500 text-white">
           <div className="container mx-auto px-4 py-4">
@@ -137,7 +136,7 @@ const Header = () => {
                 ))}
               </div>
               
-              {/* Use conditional links based on current page */}
+              {/* Main page section links */}
               <a 
                 href={isHomePage ? "#about-us" : "/#about-us"} 
                 className="py-2 hover:text-teal-200 border-t border-teal-400"
