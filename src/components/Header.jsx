@@ -23,6 +23,38 @@ const Header = () => {
   // Check if we're on the home page or a service page
   const isHomePage = window.location.pathname === '/';
   
+  // Function to handle navigation to sections on the main page
+  const navigateToMainSection = (sectionId, e) => {
+    if (isHomePage) {
+      // If on home page, just scroll to the section
+      e.preventDefault();
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // If on another page, store the target section in sessionStorage
+      // and redirect to home page
+      sessionStorage.setItem('scrollToSection', sectionId);
+      // Let the link proceed naturally to the home page
+    }
+  };
+  
+  // Check if we need to scroll to a section when the component mounts
+  useEffect(() => {
+    if (isHomePage) {
+      const sectionToScroll = sessionStorage.getItem('scrollToSection');
+      if (sectionToScroll) {
+        // Small timeout to ensure the page is fully loaded
+        setTimeout(() => {
+          const element = document.getElementById(sectionToScroll);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+          // Clear the stored section
+          sessionStorage.removeItem('scrollToSection');
+        }, 500);
+      }
+    }
+  }, [isHomePage]);
+  
   // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
@@ -83,16 +115,18 @@ const Header = () => {
                 )}
               </div>
               
-              {/* Main page section links */}
+              {/* Main page section links with improved navigation */}
               <a 
-                href={isHomePage ? "#about-us" : "/#about-us"} 
+                href={isHomePage ? "#about-us" : "/"} 
                 className="hover:text-teal-200"
+                onClick={(e) => navigateToMainSection('about-us', e)}
               >
                 Sobre Nosotros
               </a>
               <a 
-                href={isHomePage ? "#reviews" : "/#reviews"} 
+                href={isHomePage ? "#reviews" : "/"} 
                 className="hover:text-teal-200"
+                onClick={(e) => navigateToMainSection('reviews', e)}
               >
                 Reseñas
               </a>
@@ -136,16 +170,18 @@ const Header = () => {
                 ))}
               </div>
               
-              {/* Main page section links */}
+              {/* Main page section links with improved navigation */}
               <a 
-                href={isHomePage ? "#about-us" : "/#about-us"} 
+                href={isHomePage ? "#about-us" : "/"} 
                 className="py-2 hover:text-teal-200 border-t border-teal-400"
+                onClick={(e) => navigateToMainSection('about-us', e)}
               >
                 Sobre Nosotros
               </a>
               <a 
-                href={isHomePage ? "#reviews" : "/#reviews"} 
+                href={isHomePage ? "#reviews" : "/"} 
                 className="py-2 hover:text-teal-200"
+                onClick={(e) => navigateToMainSection('reviews', e)}
               >
                 Reseñas
               </a>
