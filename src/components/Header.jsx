@@ -34,6 +34,18 @@ const Header = () => {
     };
   }, []);
   
+  // Navigate to a specific route
+  const navigateTo = (path) => {
+    window.location.href = path;
+  };
+  
+  // Toggle dropdown without navigating
+  const toggleServicesDropdown = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsServicesDropdownOpen(!isServicesDropdownOpen);
+  };
+  
   return (
     <>
       <header className="bg-teal-500 text-white">
@@ -55,7 +67,7 @@ const Header = () => {
               <div className="relative" ref={dropdownRef}>
                 <button 
                   className="flex items-center hover:text-teal-200 focus:outline-none"
-                  onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                  onClick={toggleServicesDropdown}
                 >
                   Servicios
                   {isServicesDropdownOpen ? 
@@ -72,6 +84,10 @@ const Header = () => {
                         key={index}
                         href={service.path}
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-500 hover:text-white"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          navigateTo(service.path);
+                        }}
                       >
                         {service.title}
                       </a>
@@ -110,7 +126,7 @@ const Header = () => {
               <div>
                 <button 
                   className="flex items-center hover:text-teal-200 w-full focus:outline-none"
-                  onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                  onClick={toggleServicesDropdown}
                 >
                   Servicios
                   {isServicesDropdownOpen ? 
@@ -126,7 +142,12 @@ const Header = () => {
                       <a
                         key={index}
                         href={service.path}
-                        className="block py-1 text-teal-100 hover:text-white"
+                        className="block py-2 text-teal-100 hover:text-white active:text-white"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          navigateTo(service.path);
+                          setIsMenuOpen(false); // Close menu after selecting
+                        }}
                       >
                         {service.title}
                       </a>
