@@ -9,16 +9,20 @@ const Header = () => {
   
   // List of services for the dropdown
   const services = [
-    { title: "Carpintería", path: "/carpinteria" },
-    { title: "Electricidad", path: "/electricidad" },
     { title: "Mudanzas", path: "/mudanzas" },
-    { title: "Albañilería", path: "/albanileria" },
-    { title: "Plato de Ducha", path: "/plato-ducha" },
-    { title: "Tarima", path: "/tarima" },
-    { title: "Pladur", path: "/pladur" },
-    { title: "Pintura", path: "/pintura" },
-    { title: "Fontanería", path: "/fontaneria" }
+    // Other services - uncomment as they become available
+    // { title: "Carpintería", path: "/carpinteria" },
+    // { title: "Electricidad", path: "/electricidad" },
+    // { title: "Albañilería", path: "/albanileria" },
+    // { title: "Plato de Ducha", path: "/plato-ducha" },
+    // { title: "Tarima", path: "/tarima" },
+    // { title: "Pladur", path: "/pladur" },
+    // { title: "Pintura", path: "/pintura" },
+    // { title: "Fontanería", path: "/fontaneria" }
   ];
+  
+  // Check if we're on the home page or a service page
+  const isHomePage = window.location.pathname === '/';
   
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -80,8 +84,19 @@ const Header = () => {
                 )}
               </div>
               
-              <a href="#about-us" className="hover:text-teal-200">Sobre Nosotros</a>
-              <a href="#reviews" className="hover:text-teal-200">Reseñas</a>
+              {/* Use conditional links based on current page */}
+              <a 
+                href={isHomePage ? "#about-us" : "/#about-us"} 
+                className="hover:text-teal-200"
+              >
+                Sobre Nosotros
+              </a>
+              <a 
+                href={isHomePage ? "#reviews" : "/#reviews"} 
+                className="hover:text-teal-200"
+              >
+                Reseñas
+              </a>
               <a 
                 href="tel:625791624" 
                 className="bg-white text-teal-500 px-6 py-2 rounded-full font-medium hover:bg-teal-50"
@@ -122,8 +137,19 @@ const Header = () => {
                 ))}
               </div>
               
-              <a href="#about-us" className="py-2 hover:text-teal-200 border-t border-teal-400">Sobre Nosotros</a>
-              <a href="#reviews" className="py-2 hover:text-teal-200">Reseñas</a>
+              {/* Use conditional links based on current page */}
+              <a 
+                href={isHomePage ? "#about-us" : "/#about-us"} 
+                className="py-2 hover:text-teal-200 border-t border-teal-400"
+              >
+                Sobre Nosotros
+              </a>
+              <a 
+                href={isHomePage ? "#reviews" : "/#reviews"} 
+                className="py-2 hover:text-teal-200"
+              >
+                Reseñas
+              </a>
               <a href="tel:625791624" className="py-2 hover:text-teal-200 flex items-center">
                 <Phone size={16} className="mr-2" />
                 Llamar: 625 79 16 24
