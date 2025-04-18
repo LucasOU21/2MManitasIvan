@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { ChevronRight, ChevronLeft, ChevronRightCircle } from 'lucide-react';
+import ServiceDetail from './ServiceDetail';
 import SwipeIndicator from './SwipeIndicator';
 
 // Use relative paths starting with ../
@@ -22,81 +23,96 @@ import fontaneriaImg1 from '../assets/fontaneria1.jpg';
 import fontaneriaImg2 from '../assets/fontaneria2.jpg';
 import fontaneriaImg3 from '../assets/fontaneria3.jpg';
 
+const workingOnPageMessage = "Estamos trabajando en esta página. Muy pronto podrá encontrar aquí toda la información sobre este servicio.";
+
 const services = [
-  {
-    title: "Carpintería",
-    description: "Montaje de muebles y cocinas",
-    image: carpinteriaImg1,
-    details: "Servicio especializado en montaje de cocinas y muebles de Ikea, Leroy Merlin y otras tiendas.",
-    path: "/carpinteria"
-  },
-  {
-    title: "Electricidad",
-    description: "Servicios básicos de instalación eléctrica",
-    images: [electricidadImg1, electricidadImg2, electricidadImg3],
-    image: electricidadImg1,
-    details: "Servicios básicos de electricidad para el hogar.",
-    path: "/electricidad"
-  },
+  // Mudanza as the first service
   {
     title: "Mudanzas",
     description: "Servicio de mudanzas para particulares",
     images: [mudanzasImg1],
     image: mudanzasImg1,
     details: "Servicio de mudanzas exclusivamente para particulares.",
-    path: "/mudanzas"
+    path: "/mudanzas",
+    hasPage: true
+  },
+  // Other services with "working on page" message
+  {
+    title: "Carpintería",
+    description: workingOnPageMessage,
+    image: carpinteriaImg1,
+    details: workingOnPageMessage,
+    path: "/carpinteria",
+    hasPage: false
+  },
+  {
+    title: "Electricidad",
+    description: workingOnPageMessage,
+    images: [electricidadImg1, electricidadImg2, electricidadImg3],
+    image: electricidadImg1,
+    details: workingOnPageMessage,
+    path: "/electricidad",
+    hasPage: false
   },
   {
     title: "Albañilería",
-    description: "Servicios profesionales de construcción y reforma",
+    description: workingOnPageMessage,
     images: [albanileriaImg1, albanileriaImg2],
     image: albanileriaImg1,
-    details: "Servicios completos de albañilería para pequeñas y medianas reformas.",
-    path: "/albanileria"
+    details: workingOnPageMessage,
+    path: "/albanileria",
+    hasPage: false
   },
   {
     title: "Plato de Ducha",
-    description: "Instalación y reforma de platos de ducha",
+    description: workingOnPageMessage,
     images: [platoDuchaImg1, platoDuchaImg2],
     image: platoDuchaImg1,
-    details: "Especialistas en instalación y sustitución de platos de ducha.",
-    path: "/plato-ducha"
+    details: workingOnPageMessage,
+    path: "/plato-ducha",
+    hasPage: false
   },
   {
     title: "Tarima",
-    description: "Instalación de tarimas y rodapiés",
+    description: workingOnPageMessage,
     images: [tarimaImg1, tarimaImg2],
     image: tarimaImg1,
-    details: "Instalación profesional de tarimas flotantes, macizas y rodapiés.",
-    path: "/tarima"
+    details: workingOnPageMessage,
+    path: "/tarima",
+    hasPage: false
   },
   {
     title: "Pladur",
-    description: "Trabajos de construcción en pladur",
+    description: workingOnPageMessage,
     images: [pladurImg1],
     image: pladurImg1,
-    details: "Especialistas en estructuras e instalaciones de pladur.",
-    path: "/pladur"
+    details: workingOnPageMessage,
+    path: "/pladur",
+    hasPage: false
   },
   {
     title: "Pintura",
-    description: "Servicios profesionales de pintura",
+    description: workingOnPageMessage,
     images: [pinturaImg1],
     image: pinturaImg1,
-    details: "Servicio de pintura interior y exterior.",
-    path: "/pintura"
+    details: workingOnPageMessage,
+    path: "/pintura",
+    hasPage: false
   },
   {
     title: "Fontanería",
-    description: "Soluciones en fontanería",
+    description: workingOnPageMessage,
     images: [fontaneriaImg1, fontaneriaImg2, fontaneriaImg3],
     image: fontaneriaImg1,
-    details: "Fontaneros profesionales para instalaciones y reparaciones.",
-    path: "/fontaneria"
+    details: workingOnPageMessage,
+    path: "/fontaneria",
+    hasPage: false
   }
 ];
 
 const Services = () => {
+  const [selectedService, setSelectedService] = useState(null);
+  const [isServiceDetailOpen, setIsServiceDetailOpen] = useState(false);
   const scrollContainerRef = useRef(null);
 
   const scroll = (direction) => {
@@ -107,8 +123,15 @@ const Services = () => {
     }
   };
 
-  const navigateToService = (path) => {
-    window.location.href = path;
+  const handleServiceClick = (service) => {
+    if (service.hasPage) {
+      // For services with dedicated pages (only Mudanzas for now)
+      window.location.href = service.path;
+    } else {
+      // For other services, show the modal with the "working on page" message
+      setSelectedService(service);
+      setIsServiceDetailOpen(true);
+    }
   };
 
   return (
@@ -138,7 +161,7 @@ const Services = () => {
               <div 
                 key={index} 
                 className="min-w-[300px] bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow snap-start cursor-pointer"
-                onClick={() => navigateToService(service.path)}
+                onClick={() => handleServiceClick(service)}
               >
                 <img 
                   src={service.image} 
@@ -151,7 +174,7 @@ const Services = () => {
                   <button 
                     onClick={(e) => {
                       e.stopPropagation();
-                      navigateToService(service.path);
+                      handleServiceClick(service);
                     }}
                     className="text-teal-500 font-medium flex items-center hover:text-teal-600"
                   >
@@ -172,6 +195,14 @@ const Services = () => {
           </button>
         </div>
       </div>
+
+      {selectedService && (
+        <ServiceDetail 
+          isOpen={isServiceDetailOpen}
+          setIsOpen={setIsServiceDetailOpen}
+          service={selectedService}
+        />
+      )}
     </section>
   );
 };

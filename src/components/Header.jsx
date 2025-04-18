@@ -7,21 +7,40 @@ const Header = () => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   
-  // Full list of services for the dropdown
+  // Full list of services for the dropdown - only Mudanzas has a dedicated page
   const services = [
-    { title: "Carpintería", path: "/carpinteria" },
-    { title: "Electricidad", path: "/electricidad" },
-    { title: "Mudanzas", path: "/mudanzas" },
-    { title: "Albañilería", path: "/albanileria" },
-    { title: "Plato de Ducha", path: "/plato-ducha" },
-    { title: "Tarima", path: "/tarima" },
-    { title: "Pladur", path: "/pladur" },
-    { title: "Pintura", path: "/pintura" },
-    { title: "Fontanería", path: "/fontaneria" }
+    { title: "Mudanzas", path: "/mudanzas", hasPage: true },
+    { title: "Carpintería", path: "#services", hasPage: false },
+    { title: "Electricidad", path: "#services", hasPage: false },
+    { title: "Albañilería", path: "#services", hasPage: false },
+    { title: "Plato de Ducha", path: "#services", hasPage: false },
+    { title: "Tarima", path: "#services", hasPage: false },
+    { title: "Pladur", path: "#services", hasPage: false },
+    { title: "Pintura", path: "#services", hasPage: false },
+    { title: "Fontanería", path: "#services", hasPage: false }
   ];
   
   // Check if we're on the home page or a service page
   const isHomePage = window.location.pathname === '/';
+  
+  // Function to handle service link clicks
+  const handleServiceClick = (service, e) => {
+    if (!service.hasPage) {
+      e.preventDefault();
+      // If on home page, scroll to services section
+      if (isHomePage) {
+        document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // If on another page, store instruction to scroll to services and redirect to home
+        sessionStorage.setItem('scrollToSection', 'services');
+        window.location.href = '/';
+      }
+      // Close the dropdown
+      setIsServicesDropdownOpen(false);
+      setIsMenuOpen(false);
+    }
+    // For Mudanzas, let the default link behavior take place
+  };
   
   // Function to handle navigation to sections on the main page
   const navigateToMainSection = (sectionId, e) => {
@@ -31,7 +50,6 @@ const Header = () => {
       document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     } else {
       // If on another page, store the target section in sessionStorage
-      // and redirect to home page
       sessionStorage.setItem('scrollToSection', sectionId);
       // Let the link proceed naturally to the home page
     }
@@ -107,6 +125,7 @@ const Header = () => {
                         key={index}
                         href={service.path}
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-500 hover:text-white"
+                        onClick={(e) => handleServiceClick(service, e)}
                       >
                         {service.title}
                       </a>
@@ -164,6 +183,7 @@ const Header = () => {
                     key={index}
                     href={service.path}
                     className="block py-2 px-2 text-white hover:text-teal-200"
+                    onClick={(e) => handleServiceClick(service, e)}
                   >
                     {service.title}
                   </a>
