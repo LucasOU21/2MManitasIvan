@@ -11,7 +11,7 @@ const ServicePlaceholder = ({ serviceName }) => {
   }, []);
 
   const handleBackClick = () => {
-    window.history.back();
+    window.location.href = "/";
   };
 
   return (
@@ -26,7 +26,7 @@ const ServicePlaceholder = ({ serviceName }) => {
             className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-6 flex items-center hover:bg-white/30 transition-colors"
           >
             <ArrowLeft size={16} className="mr-2" />
-            Volver atrás
+            Volver a inicio
           </button>
           
           <div className="max-w-3xl mx-auto text-center">
