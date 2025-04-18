@@ -34,18 +34,6 @@ const Header = () => {
     };
   }, []);
   
-  // Navigate to a specific route
-  const navigateTo = (path) => {
-    window.location.href = path;
-  };
-  
-  // Toggle dropdown without navigating
-  const toggleServicesDropdown = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setIsServicesDropdownOpen(!isServicesDropdownOpen);
-  };
-  
   return (
     <>
       <header className="bg-teal-500 text-white">
@@ -67,7 +55,7 @@ const Header = () => {
               <div className="relative" ref={dropdownRef}>
                 <button 
                   className="flex items-center hover:text-teal-200 focus:outline-none"
-                  onClick={toggleServicesDropdown}
+                  onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
                 >
                   Servicios
                   {isServicesDropdownOpen ? 
@@ -84,10 +72,6 @@ const Header = () => {
                         key={index}
                         href={service.path}
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-500 hover:text-white"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          navigateTo(service.path);
-                        }}
                       >
                         {service.title}
                       </a>
@@ -117,48 +101,30 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Simple Version with No Nested Dropdown */}
       {isMenuOpen && (
         <div className="md:hidden bg-teal-500 text-white">
           <div className="container mx-auto px-4 py-4">
-            <nav className="flex flex-col space-y-4">
-              {/* Mobile Services Dropdown */}
-              <div>
-                <button 
-                  className="flex items-center hover:text-teal-200 w-full focus:outline-none"
-                  onClick={toggleServicesDropdown}
-                >
-                  Servicios
-                  {isServicesDropdownOpen ? 
-                    <ChevronUp size={16} className="ml-2" /> : 
-                    <ChevronDown size={16} className="ml-2" />
-                  }
-                </button>
-                
-                {/* Mobile Dropdown Content */}
-                {isServicesDropdownOpen && (
-                  <div className="pl-4 mt-2 space-y-2">
-                    {services.map((service, index) => (
-                      <a
-                        key={index}
-                        href={service.path}
-                        className="block py-2 text-teal-100 hover:text-white active:text-white"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          navigateTo(service.path);
-                          setIsMenuOpen(false); // Close menu after selecting
-                        }}
-                      >
-                        {service.title}
-                      </a>
-                    ))}
-                  </div>
-                )}
+            <nav className="flex flex-col space-y-2">
+              {/* No dropdown toggle - just display services heading */}
+              <div className="font-medium text-lg py-2 border-b border-teal-400">Servicios:</div>
+              
+              {/* Direct list of service links - always visible in mobile menu */}
+              <div className="pl-2 space-y-2 mb-4">
+                {services.map((service, index) => (
+                  <a
+                    key={index}
+                    href={service.path}
+                    className="block py-2 px-2 text-white hover:text-teal-200"
+                  >
+                    {service.title}
+                  </a>
+                ))}
               </div>
               
-              <a href="#about-us" className="hover:text-teal-200">Sobre Nosotros</a>
-              <a href="#reviews" className="hover:text-teal-200">Reseñas</a>
-              <a href="tel:625791624" className="hover:text-teal-200 flex items-center">
+              <a href="#about-us" className="py-2 hover:text-teal-200 border-t border-teal-400">Sobre Nosotros</a>
+              <a href="#reviews" className="py-2 hover:text-teal-200">Reseñas</a>
+              <a href="tel:625791624" className="py-2 hover:text-teal-200 flex items-center">
                 <Phone size={16} className="mr-2" />
                 Llamar: 625 79 16 24
               </a>
