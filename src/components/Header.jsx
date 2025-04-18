@@ -7,40 +7,21 @@ const Header = () => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   
-  // Full list of services for the dropdown - only Mudanzas has a dedicated page
+  // Full list of services for the dropdown
   const services = [
-    { title: "Mudanzas", path: "/mudanzas", hasPage: true },
-    { title: "Carpintería", path: "#services", hasPage: false },
-    { title: "Electricidad", path: "#services", hasPage: false },
-    { title: "Albañilería", path: "#services", hasPage: false },
-    { title: "Plato de Ducha", path: "#services", hasPage: false },
-    { title: "Tarima", path: "#services", hasPage: false },
-    { title: "Pladur", path: "#services", hasPage: false },
-    { title: "Pintura", path: "#services", hasPage: false },
-    { title: "Fontanería", path: "#services", hasPage: false }
+    { title: "Mudanzas", path: "/mudanzas" },
+    { title: "Carpintería", path: "/carpinteria" },
+    { title: "Electricidad", path: "/electricidad" },
+    { title: "Albañilería", path: "/albanileria" },
+    { title: "Plato de Ducha", path: "/plato-ducha" },
+    { title: "Tarima", path: "/tarima" },
+    { title: "Pladur", path: "/pladur" },
+    { title: "Pintura", path: "/pintura" },
+    { title: "Fontanería", path: "/fontaneria" }
   ];
   
   // Check if we're on the home page or a service page
   const isHomePage = window.location.pathname === '/';
-  
-  // Function to handle service link clicks
-  const handleServiceClick = (service, e) => {
-    if (!service.hasPage) {
-      e.preventDefault();
-      // If on home page, scroll to services section
-      if (isHomePage) {
-        document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        // If on another page, store instruction to scroll to services and redirect to home
-        sessionStorage.setItem('scrollToSection', 'services');
-        window.location.href = '/';
-      }
-      // Close the dropdown
-      setIsServicesDropdownOpen(false);
-      setIsMenuOpen(false);
-    }
-    // For Mudanzas, let the default link behavior take place
-  };
   
   // Function to handle navigation to sections on the main page
   const navigateToMainSection = (sectionId, e) => {
@@ -51,7 +32,8 @@ const Header = () => {
     } else {
       // If on another page, store the target section in sessionStorage
       sessionStorage.setItem('scrollToSection', sectionId);
-      // Let the link proceed naturally to the home page
+      // Navigate to the home page
+      window.location.href = '/';
     }
   };
   
@@ -117,19 +99,25 @@ const Header = () => {
                   }
                 </button>
                 
-                {/* Dropdown Menu */}
+                {/* Completely redesigned dropdown to ensure full clickability */}
                 {isServicesDropdownOpen && (
-                  <div className="absolute z-10 mt-2 py-2 w-48 bg-white rounded-md shadow-xl">
-                    {services.map((service, index) => (
-                      <a
-                        key={index}
-                        href={service.path}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-500 hover:text-white"
-                        onClick={(e) => handleServiceClick(service, e)}
-                      >
-                        {service.title}
-                      </a>
-                    ))}
+                  <div className="absolute z-50 mt-2 w-56 bg-white rounded-md shadow-xl">
+                    <div className="py-2">
+                      {services.map((service, index) => (
+                        <a
+                          key={index}
+                          href={service.path}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-500 hover:text-white"
+                          onClick={() => {
+                            // Simply use window.location to navigate
+                            window.location.href = service.path;
+                            setIsServicesDropdownOpen(false);
+                          }}
+                        >
+                          {service.title}
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
@@ -183,7 +171,11 @@ const Header = () => {
                     key={index}
                     href={service.path}
                     className="block py-2 px-2 text-white hover:text-teal-200"
-                    onClick={(e) => handleServiceClick(service, e)}
+                    onClick={() => {
+                      // Simply use window.location to navigate
+                      window.location.href = service.path;
+                      setIsMenuOpen(false);
+                    }}
                   >
                     {service.title}
                   </a>

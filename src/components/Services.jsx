@@ -1,118 +1,94 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { ChevronRight, ChevronLeft, ChevronRightCircle } from 'lucide-react';
-import ServiceDetail from './ServiceDetail';
 import SwipeIndicator from './SwipeIndicator';
 
 // Use relative paths starting with ../
 import carpinteriaImg1 from '../assets/carpinteria1.png';
-import carpinteriaImg2 from '../assets/carpinteria2.png';
-import carpinteriaImg3 from '../assets/carpinteria3.png';
 import electricidadImg1 from '../assets/electricidad.jpg';
-import electricidadImg2 from '../assets/electricidad2.jpg';
-import electricidadImg3 from '../assets/electricidad3.jpg';
 import albanileriaImg1 from '../assets/Albanileria1.jpg';
-import albanileriaImg2 from '../assets/Albanileria2.jpg';
 import platoDuchaImg1 from '../assets/platoducha1.jpg';
-import platoDuchaImg2 from '../assets/platoducha2.jpg';
 import tarimaImg1 from '../assets/Tarima1.jpg';
-import tarimaImg2 from '../assets/Tarima2.jpg';
 import pladurImg1 from '../assets/pladur1.jpg';
 import mudanzasImg1 from '../assets/mudanza1.jpg';
 import pinturaImg1 from '../assets/pintura1.jpg';
 import fontaneriaImg1 from '../assets/fontaneria1.jpg';
-import fontaneriaImg2 from '../assets/fontaneria2.jpg';
-import fontaneriaImg3 from '../assets/fontaneria3.jpg';
-
-const workingOnPageMessage = "Estamos trabajando en esta página. Muy pronto podrá encontrar aquí toda la información sobre este servicio.";
 
 const services = [
-  // Mudanza as the first service
   {
     title: "Mudanzas",
     description: "Servicio de mudanzas para particulares",
-    images: [mudanzasImg1],
     image: mudanzasImg1,
     details: "Servicio de mudanzas exclusivamente para particulares.",
     path: "/mudanzas",
     hasPage: true
   },
-  // Other services with "working on page" message
   {
     title: "Carpintería",
-    description: workingOnPageMessage,
+    description: "Montaje de muebles y cocinas",
     image: carpinteriaImg1,
-    details: workingOnPageMessage,
+    details: "Servicio especializado en montaje de cocinas y muebles de Ikea, Leroy Merlin y otras tiendas.",
     path: "/carpinteria",
-    hasPage: false
+    hasPage: true
   },
   {
     title: "Electricidad",
-    description: workingOnPageMessage,
-    images: [electricidadImg1, electricidadImg2, electricidadImg3],
+    description: "Servicios básicos de instalación eléctrica",
     image: electricidadImg1,
-    details: workingOnPageMessage,
+    details: "Servicios básicos de electricidad para el hogar.",
     path: "/electricidad",
-    hasPage: false
+    hasPage: true
   },
   {
     title: "Albañilería",
-    description: workingOnPageMessage,
-    images: [albanileriaImg1, albanileriaImg2],
+    description: "Servicios profesionales de construcción y reforma",
     image: albanileriaImg1,
-    details: workingOnPageMessage,
+    details: "Servicios completos de albañilería para pequeñas y medianas reformas.",
     path: "/albanileria",
-    hasPage: false
+    hasPage: true
   },
   {
     title: "Plato de Ducha",
-    description: workingOnPageMessage,
-    images: [platoDuchaImg1, platoDuchaImg2],
+    description: "Instalación y reforma de platos de ducha",
     image: platoDuchaImg1,
-    details: workingOnPageMessage,
+    details: "Especialistas en instalación y sustitución de platos de ducha.",
     path: "/plato-ducha",
-    hasPage: false
+    hasPage: true
   },
   {
     title: "Tarima",
-    description: workingOnPageMessage,
-    images: [tarimaImg1, tarimaImg2],
+    description: "Instalación de tarimas y rodapiés",
     image: tarimaImg1,
-    details: workingOnPageMessage,
+    details: "Instalación profesional de tarimas flotantes, macizas y rodapiés.",
     path: "/tarima",
-    hasPage: false
+    hasPage: true
   },
   {
     title: "Pladur",
-    description: workingOnPageMessage,
-    images: [pladurImg1],
+    description: "Trabajos de construcción en pladur",
     image: pladurImg1,
-    details: workingOnPageMessage,
+    details: "Especialistas en estructuras e instalaciones de pladur.",
     path: "/pladur",
-    hasPage: false
+    hasPage: true
   },
   {
     title: "Pintura",
-    description: workingOnPageMessage,
-    images: [pinturaImg1],
+    description: "Servicios profesionales de pintura",
     image: pinturaImg1,
-    details: workingOnPageMessage,
+    details: "Servicio de pintura interior y exterior.",
     path: "/pintura",
-    hasPage: false
+    hasPage: true
   },
   {
     title: "Fontanería",
-    description: workingOnPageMessage,
-    images: [fontaneriaImg1, fontaneriaImg2, fontaneriaImg3],
+    description: "Soluciones en fontanería",
     image: fontaneriaImg1,
-    details: workingOnPageMessage,
+    details: "Fontaneros profesionales para instalaciones y reparaciones.",
     path: "/fontaneria",
-    hasPage: false
+    hasPage: true
   }
 ];
 
 const Services = () => {
-  const [selectedService, setSelectedService] = useState(null);
-  const [isServiceDetailOpen, setIsServiceDetailOpen] = useState(false);
   const scrollContainerRef = useRef(null);
 
   const scroll = (direction) => {
@@ -123,15 +99,8 @@ const Services = () => {
     }
   };
 
-  const handleServiceClick = (service) => {
-    if (service.hasPage) {
-      // For services with dedicated pages (only Mudanzas for now)
-      window.location.href = service.path;
-    } else {
-      // For other services, show the modal with the "working on page" message
-      setSelectedService(service);
-      setIsServiceDetailOpen(true);
-    }
+  const navigateToService = (path) => {
+    window.location.href = path;
   };
 
   return (
@@ -161,7 +130,7 @@ const Services = () => {
               <div 
                 key={index} 
                 className="min-w-[300px] bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow snap-start cursor-pointer"
-                onClick={() => handleServiceClick(service)}
+                onClick={() => navigateToService(service.path)}
               >
                 <img 
                   src={service.image} 
@@ -174,7 +143,7 @@ const Services = () => {
                   <button 
                     onClick={(e) => {
                       e.stopPropagation();
-                      handleServiceClick(service);
+                      navigateToService(service.path);
                     }}
                     className="text-teal-500 font-medium flex items-center hover:text-teal-600"
                   >
@@ -195,14 +164,6 @@ const Services = () => {
           </button>
         </div>
       </div>
-
-      {selectedService && (
-        <ServiceDetail 
-          isOpen={isServiceDetailOpen}
-          setIsOpen={setIsServiceDetailOpen}
-          service={selectedService}
-        />
-      )}
     </section>
   );
 };
