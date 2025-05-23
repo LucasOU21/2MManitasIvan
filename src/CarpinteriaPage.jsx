@@ -89,7 +89,7 @@ const MudanzasPage = () => {
                 isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              El servicio de mudanzas más confiable de Madrid. Cuidamos de sus pertenencias como si fueran nuestras, garantizando un traslado seguro y sin complicaciones.
+              El servicio de montaje más confiable de Madrid. Cuidamos de sus pertenencias como si fueran nuestras, garantizando un traslado seguro y sin complicaciones.
             </p>
             
             <div 
