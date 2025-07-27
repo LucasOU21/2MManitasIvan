@@ -3,7 +3,6 @@ import { Phone, MessageCircle, ArrowLeft, ShieldCheck, Clock, PackageCheck } fro
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
-
 import montajeHero from './assets/montaje.muebles.jpg';
 
 const MontajeMueblesPage = () => {
@@ -29,6 +28,13 @@ const MontajeMueblesPage = () => {
   const handleBackClick = () => {
     window.location.href = "/";
   };
+
+  // Dentro de MontajeMueblesPage, justo antes del return:
+const [openSection, setOpenSection] = useState(null);
+
+const toggleSection = (index) => {
+  setOpenSection(openSection === index ? null : index);
+};
 
   return (
     <div className="min-h-screen bg-white">
@@ -128,7 +134,7 @@ const MontajeMueblesPage = () => {
         </div>
       </section>
 
-      {/* Formulario de contacto */}
+      {/* Formulario de contacto 
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 max-w-2xl">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Podemos ayudarte</h2>
@@ -190,7 +196,7 @@ const MontajeMueblesPage = () => {
               </div>
             </div>
 
-            {/* Campo que aparece según método */}
+          
             {contactMethod === 'WhatsApp' && (
               <div>
                 <label className="block text-gray-700 font-medium mb-2">Número de WhatsApp *</label>
@@ -238,7 +244,7 @@ const MontajeMueblesPage = () => {
             </button>
           </form>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA personalizado */}
       <section className="py-16 bg-teal-600 text-white text-center">
