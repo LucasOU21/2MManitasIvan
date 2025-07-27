@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './App.jsx'
 import MudanzasPage from './MudanzasPage.jsx'
-import CarpinteriaPage from './CarpinteriaPage.jsx'
+import CarpinteriaPage from './MontajeMuebles.jsx'
 import ServicePlaceholder from './ServicePlaceholder.jsx'
 import './index.css'
 import { Analytics } from "@vercel/analytics/react"

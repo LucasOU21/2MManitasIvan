@@ -23,7 +23,7 @@ const services = [
     hasPage: true
   },
   {
-    title: "Carpintería",
+    title: "Montaje de Muebles",
     description: "Montaje de muebles y cocinas",
     image: carpinteriaImg1,
     details: "Servicio especializado en montaje de cocinas y muebles de Ikea, Leroy Merlin y otras tiendas.",
