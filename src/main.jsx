@@ -5,6 +5,7 @@ import App from './App.jsx'
 import MudanzasPage from './MudanzasPage.jsx'
 import CarpinteriaPage from './MontajeMuebles.jsx'
 import ServicePlaceholder from './ServicePlaceholder.jsx'
+import Cocinas from './Cocinas.jsx'
 import './index.css'
 import { Analytics } from "@vercel/analytics/react"
 
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/mudanzas" element={<MudanzasPage />} />
         {/* Placeholder routes for other services - replace with actual components as you create them */}
         <Route path="/carpinteria" element={<CarpinteriaPage />} /> 
+        <Route path="/cocinas" element={<Cocinas serviceName = "Cocinas"/>} />
         <Route path="/electricidad" element={<ServicePlaceholder serviceName="Electricidad" />} />
         <Route path="/albanileria" element={<ServicePlaceholder serviceName="Albañilería" />} />
         <Route path="/plato-ducha" element={<ServicePlaceholder serviceName="Plato de Ducha" />} />

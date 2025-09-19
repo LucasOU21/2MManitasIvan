@@ -10,7 +10,8 @@ const Header = () => {
   // Full list of services for the dropdown
   const services = [
     { title: "Mudanzas", path: "/mudanzas" },
-    { title: "Carpintería", path: "/carpinteria" },
+    { title: "Montaje de Muebles", path: "/carpinteria" },
+    { title: "Montaje de Cocinas", path: "/cocinas" },
     { title: "Electricidad", path: "/electricidad" },
     { title: "Albañilería", path: "/albanileria" },
     { title: "Plato de Ducha", path: "/plato-ducha" },
