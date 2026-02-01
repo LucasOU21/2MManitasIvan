@@ -12,33 +12,36 @@ import pladurImg1 from '../assets/pladur1.jpg';
 import mudanzasImg1 from '../assets/mudanza1.jpg';
 import pinturaImg1 from '../assets/pintura1.jpg';
 import fontaneriaImg1 from '../assets/fontaneria1.jpg';
+import puertasImg1 from '../assets/puerta-2.jpg';
+import cocinasImg1 from '../assets/cocina2.png';
+import montajeImg1 from '../assets/montaje.muebles.jpg';
 
 const services = [
   {
-    title: "Mudanzas",
-    description: "Servicio de mudanzas para particulares",
-    image: mudanzasImg1,
-    details: "Servicio de mudanzas exclusivamente para particulares.",
-    path: "/mudanzas",
+    title: "Montaje de Cocinas",
+    description: "Montaje rápido, limpio y con acabados de calidad",
+    image: cocinasImg1,
+    details: "Nos encargamos del montaje e instalación completa de tu cocina.",
+    path: "/cocinas",
     hasPage: true
   },
   {
     title: "Montaje de Muebles",
-    description: "Montaje de muebles y cocinas",
-    image: carpinteriaImg1,
+    description: "Montaje de muebles de IKEA o cualquier otra tienda",
+    image: montajeImg1,
     details: "Servicio especializado en montaje de cocinas y muebles de Ikea, Leroy Merlin y otras tiendas.",
-    path: "/carpinteria",
+    path: "/montaje",
     hasPage: true
   },
   {
-    title: "Electricidad",
-    description: "Servicios básicos de instalación eléctrica",
-    image: electricidadImg1,
-    details: "Servicios básicos de electricidad para el hogar.",
-    path: "/electricidad",
+    title: "Instalación de Puertas",
+    description: "Servicio de instalación de puertas interiores y exteriores",
+    image: puertasImg1,
+    details: "Nos encargamos del montaje, ajuste y nivelado de la puerta",
+    path: "/puertas",
     hasPage: true
   },
-  {
+  /*{
     title: "Albañilería",
     description: "Servicios profesionales de construcción y reforma",
     image: albanileriaImg1,
@@ -53,7 +56,7 @@ const services = [
     details: "Especialistas en instalación y sustitución de platos de ducha.",
     path: "/plato-ducha",
     hasPage: true
-  },
+  },*/
   {
     title: "Tarima",
     description: "Instalación de tarimas y rodapiés",
@@ -71,21 +74,21 @@ const services = [
     hasPage: true
   },
   {
+    title: "Mudanzas",
+    description: "Servicio de mudanzas para particulares",
+    image: mudanzasImg1,
+    details: "Servicio de mudanzas exclusivamente para particulares.",
+    path: "/mudanzas",
+    hasPage: true
+  }
+  /*{
     title: "Pintura",
     description: "Servicios profesionales de pintura",
     image: pinturaImg1,
     details: "Servicio de pintura interior y exterior.",
     path: "/pintura",
     hasPage: true
-  },
-  {
-    title: "Fontanería",
-    description: "Soluciones en fontanería",
-    image: fontaneriaImg1,
-    details: "Fontaneros profesionales para instalaciones y reparaciones.",
-    path: "/fontaneria",
-    hasPage: true
-  }
+  },*/
 ];
 
 const Services = () => {

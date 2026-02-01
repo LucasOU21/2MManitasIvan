@@ -3,7 +3,7 @@ import { Phone, MessageCircle, ArrowLeft, ShieldCheck, Clock, PackageCheck, Truc
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
-import montajeHero from './assets/montaje.muebles.jpg';
+import montajeHero from './assets/cocina3.png';
 
 const MontajeMueblesPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -48,7 +48,7 @@ const MontajeMueblesPage = () => {
           </button>
           <div className="max-w-3xl text-white">
             <h1 className={`text-4xl md:text-5xl font-bold mb-4 transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              Montaje profesional de Cocinas en Madrid
+              Montaje profesional de Cocinas
             </h1>
             <p className={`text-lg md:text-xl mb-6 transition-all duration-700 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               Montamos desde muebles básicos hasta complejos armarios o cocinas. Rápido y sin preocupaciones.

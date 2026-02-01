@@ -100,12 +100,11 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-4">Sostenibilidad</h3>
+                <h3 className="text-xl font-semibold mb-4">Experiencia</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Nuestro compromiso con el medio ambiente va más allá de las palabras. 
-                  Utilizamos productos ecológicos, optimizamos nuestros procesos para 
-                  reducir residuos y trabajamos con proveedores que comparten nuestra 
-                  visión de responsabilidad ambiental.
+                  Nuestra experiencia no solo se refleja en el resultado final, sino también
+                  en la forma de trabajar: precisión, rapidez, orden y respeto por el hogar 
+                  del cliente. Sabemos cómo hacer bien el trabajo desde el primer momento.
                 </p>
               </div>
             </div>
