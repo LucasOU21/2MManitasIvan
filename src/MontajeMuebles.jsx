@@ -79,7 +79,7 @@ const MontajeMueblesPage = () => {
       </section>
 
       {/* ¿Qué incluye nuestro servicio? */}
-      <section className="py-12 bg-white">
+      <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-xl md:text-3xl font-bold text-center mb-8">¿Por qué confiar en nosotros?</h2>
           {/*<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -111,13 +111,13 @@ const MontajeMueblesPage = () => {
       </section>
 
       {/* Servicio de Montaje de mueble en general */}
-      <section className="py-12 bg-white">
+      <section className="py-0 g-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="bg-teal-500 text-white rounded-lg p-6 text-center flex flex-col items-center justify-center mb-8">
               <h3 className="text-xl md:text-2xl font-semibold">No es lo mismo montar muebles de una tienda que de otra, y nosotros ya conocemos esas diferencias.</h3>
             </div>
-            
+                        
             <p className="text-gray-700 mb-5 text-base md:text-lg leading-relaxed">
               En 2M tenemos experiencia con muebles de distintas marcas y sabemos adaptarnos al sistema de montaje, herrajes, ajustes y particularidades de cada fabricante.
             </p>
