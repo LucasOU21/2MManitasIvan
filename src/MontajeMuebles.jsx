@@ -289,8 +289,8 @@ const MontajeMueblesPage = () => {
               <img src={montaje4} alt="Montaje real 4" className="w-64 h-48 object-cover rounded-lg flex-shrink-0" />
               <img src={montaje5} alt="Montaje real 5" className="w-64 h-48 object-cover rounded-lg flex-shrink-0" />
             </div>
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-14 bg-gradient-to-r from-gray-50"></div>
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-14 bg-gradient-to-l from-gray-50"></div>
+             {/*<div className="pointer-events-none absolute inset-y-0 left-0 w-14 bg-gradient-to-r from-gray-50"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-14 bg-gradient-to-l from-gray-50"></div>*/}
           </div>
         </div>
       </section>
