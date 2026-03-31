@@ -81,7 +81,7 @@ const MontajeMueblesPage = () => {
       {/* ¿Qué incluye nuestro servicio? */}
       <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-xl md:text-3xl font-bold text-center mb-8">¿Por qué confiar en nosotros?</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">¿Por qué confiar en nosotros?</h2>
           {/*<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
               { 
