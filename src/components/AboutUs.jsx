@@ -33,19 +33,22 @@ const AboutUs = () => {
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
-              Sobre Nosotros
+              Quiénes Somos
             </h1>
             <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-              En 2MManitasMadrid, nuestra pasión es simplificar la vida de nuestros clientes 
-              mediante servicios de mantenimiento y reparación integrales y sostenibles. 
-              Fundada en Madrid, hemos crecido desde una pequeña iniciativa local hasta 
-              convertirnos en un referente en servicios profesionales de mantenimiento.
+              En 2M Manitas Madrid nos dedicamos a ayudarte con esos trabajos del hogar que necesitan hacerse bien, con orden y sin complicaciones. 
+              Realizamos montaje de muebles, cocinas, carpintería y pequeños trabajos de instalación en Madrid, siempre con un enfoque claro: ofrecer un servicio rápido, profesional y de confianza.
             </p>
+                          
             <p className="text-lg text-gray-600 leading-relaxed">
-              Creemos que un hogar bien mantenido es la base de una vida más tranquila y 
-              confortable. Por eso, nos comprometemos a ofrecer soluciones rápidas, 
-              eficientes y personalizadas que respondan a las necesidades únicas de cada cliente.
+              Sabemos que cuando alguien entra en tu casa, no solo valoras que haga bien el trabajo, sino también la puntualidad, la limpieza, el trato y el cuidado de cada detalle.
+              Por eso trabajamos para que cada montaje o instalación quede bien terminado, funcional y listo para usar.
             </p>
+
+            <p className= "text-lg text-gray-600 mb-10 leading-relaxed">
+              Nuestro objetivo es que tengas la tranquilidad de contar con alguien que te lo ponga fácil desde el primer contacto.
+            </p>
+
           </div>
         </div>
       </section>
@@ -67,7 +70,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Values Section
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -110,9 +113,9 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>*/}
 
-    </div>
+    </div> 
   );
 };
 

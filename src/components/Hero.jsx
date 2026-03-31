@@ -39,14 +39,14 @@ const Hero = () => {
                 isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              Servicios de Manitas Profesional a Domicilio
+              Montaje de muebles, cocinas y carpintería en Madrid
             </h2>
             <p 
               className={`text-lg mb-8 transition-all duration-700 delay-300 ease-out ${
                 isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              Soluciones rápidas y eficientes para todas tus necesidades de reparación y mantenimiento
+              Soluciones rápidas y eficientes con acabado profesional para tu hogar
             </p>
             <div 
               className={`flex flex-wrap gap-4 justify-center md:justify-start transition-all duration-700 delay-500 ease-out ${

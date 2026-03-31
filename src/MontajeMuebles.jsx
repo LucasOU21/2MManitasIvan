@@ -4,6 +4,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import montajeHero from './assets/montaje.muebles.jpg';
+import montaje1 from './assets/cocina3.jpeg';
+import montaje2 from './assets/cocina1.jpeg';
+import montaje3 from './assets/panelado.jpeg';
+import montaje4 from './assets/isla.jpeg';
+import montaje5 from './assets/cocina1.jpg';
 
 const MontajeMueblesPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -48,10 +53,10 @@ const MontajeMueblesPage = () => {
           </button>
           <div className="max-w-3xl text-white">
             <h1 className={`text-4xl md:text-5xl font-bold mb-4 transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              Montaje profesional de muebles en Madrid
+              Especialistas en montaje de muebles
             </h1>
             <p className={`text-lg md:text-xl mb-6 transition-all duration-700 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              Montamos desde muebles básicos hasta complejos armarios o cocinas. Rápido y sin preocupaciones.
+              Montamos cocinas, armarios, cómodas, canapés, escritorios, estanterías y muebles de todo tipo con cuidado, orden y precisión.
             </p>
             <div className={`flex gap-3 transition-all duration-700 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <button 
@@ -76,9 +81,9 @@ const MontajeMueblesPage = () => {
       {/* ¿Qué incluye nuestro servicio? */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">¿Qué incluye nuestro servicio?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
+          <h2 className="text-xl md:text-3xl font-bold text-center mb-8">¿Por qué confiar en nosotros?</h2>
+          {/*<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
               { 
                 icon: <PackageCheck size={32} className="text-teal-500" />, 
                 title: 'Montaje de todo tipo de muebles', 
@@ -101,7 +106,7 @@ const MontajeMueblesPage = () => {
                 <p className="text-gray-600">{item.text}</p>
               </div>
             ))}
-          </div>
+          </div>*/}
         </div>
       </section>
 
@@ -110,11 +115,11 @@ const MontajeMueblesPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="bg-teal-500 text-white rounded-lg p-6 text-center flex flex-col items-center justify-center mb-8">
-              <h3 className="text-xl md:text-2xl font-semibold">Muebles grandes, pequeños o a medida… nosotros los montamos</h3>
+              <h3 className="text-xl md:text-2xl font-semibold">No es lo mismo montar muebles de una tienda que de otra, y nosotros ya conocemos esas diferencias.</h3>
             </div>
             
             <p className="text-gray-700 mb-5 text-base md:text-lg leading-relaxed">
-              En Manitas 2M montamos todo tipo de muebles: armarios, estanterías, librerías, cocinas y muebles a medida, con rapidez, seguridad y acabado profesional.
+              En 2M tenemos experiencia con muebles de distintas marcas y sabemos adaptarnos al sistema de montaje, herrajes, ajustes y particularidades de cada fabricante.
             </p>
             
             <div className="bg-white p-4 md:p-6 rounded-lg shadow-sm md:shadow-md">
@@ -122,18 +127,18 @@ const MontajeMueblesPage = () => {
               <p className="text-gray-600 text-sm md:text-base mb-3 leading-relaxed">
                 Olvídate de instrucciones complicadas y piezas sueltas. Nosotros nos encargamos de todo el montaje, ajustando cada detalle para que tu mueble quede estable, alineado y listo para usar desde el primer momento, sin estrés ni pérdida de tiempo.
               </p>
-              <div className="bg-teal-50 p-3 md:p-4 rounded-lg border-l-4 border-teal-400">
+              {/*<div className="bg-teal-50 p-3 md:p-4 rounded-lg border-l-4 border-teal-400">
                 <p className="text-gray-700 font-medium text-sm md:text-base">Importante:</p>
                 <p className="text-gray-600 text-sm md:text-base">
                   Recuerda agendar tu servicio de montaje de muebles lo antes posible para asegurar el mejor horario disponible.
                 </p>
-              </div>
+              </div>/**/}
             </div>
           </div>
         </div>
       </section>
           
-      {/* Expertos en Cocinas */}
+      {/* Expertos en Cocinas 
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
@@ -142,9 +147,9 @@ const MontajeMueblesPage = () => {
               <p className="text-base md:text-lg text-gray-700 mb-4">
                 En Manitas 2M nos encargamos del montaje de muebles altos, bajos y todo tipo de accesorios de cocina de todas las tiendas, asegurando un trabajo rápido, seguro y con acabado profesional que se adapta a tu espacio y necesidades.
               </p>
-            </div>
+            </div>*/}
             
-            {/* Service feature boxes */}
+            {/* Service feature boxes 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mb-8 md:mb-10">
               <div className="bg-teal-500 text-white rounded-lg p-3 md:p-6 text-center flex flex-col items-center justify-center h-28 md:h-44 hover:scale-105 transition transform cursor-pointer">
                 <div className="bg-white rounded-full p-3 md:p-4 mb-2 md:mb-3 inline-flex">
@@ -173,9 +178,9 @@ const MontajeMueblesPage = () => {
                 </div>
                 <h3 className="text-sm md:text-xl font-semibold">Torres de Cocina</h3>
               </div>
-            </div>
+            </div>*/}
             
-            {/* Content box for Muebles altos */}
+            {/* Content box for Muebles altos 
             <div className="mb-8 bg-white rounded-lg p-5 md:p-10 shadow-md md:shadow-lg border-l-4 border-teal-500 scroll-mt-20">
               <h3 className="text-xl md:text-2xl font-semibold mb-3">Muebles altos</h3>
               <p className="text-gray-700 mb-4 text-base md:text-lg leading-relaxed">
@@ -195,9 +200,9 @@ const MontajeMueblesPage = () => {
                   <p className="text-gray-600 text-sm md:text-base leading-relaxed">Puertas seguras, apertura cómoda y acabado alineado con el resto de la cocina.</p>
                 </div>
               </div>
-            </div>
+            </div>*/}
 
-            {/* Content box for Muebles bajos */}
+            {/* Content box for Muebles bajos 
             <div className="mb-8 bg-white rounded-lg p-5 md:p-10 shadow-md md:shadow-lg border-l-4 border-teal-500 scroll-mt-20">
               <h3 className="text-xl md:text-2xl font-semibold mb-3">Muebles bajos</h3>
               <p className="text-gray-700 mb-4 text-base md:text-lg leading-relaxed">
@@ -217,9 +222,9 @@ const MontajeMueblesPage = () => {
                   <p className="text-gray-600 text-sm md:text-base leading-relaxed">Apertura suave, aprovechamiento máximo del espacio y alineado perfecto con la encimera.</p>
                 </div>
               </div>
-            </div>
+            </div>*/}
 
-            {/* Content box for Encimeras - CORREGIDO: dentro del mismo contenedor */}
+            {/* Content box for Encimeras - CORREGIDO: dentro del mismo contenedor 
             <div className="mb-8 bg-white rounded-lg p-5 md:p-10 shadow-md md:shadow-lg border-l-4 border-teal-500 scroll-mt-20">
               <h3 className="text-xl md:text-2xl font-semibold mb-3">Encimeras</h3>
               <p className="text-gray-700 mb-4 text-base md:text-lg leading-relaxed">
@@ -243,9 +248,9 @@ const MontajeMueblesPage = () => {
                   <p className="text-gray-600 text-sm md:text-base leading-relaxed">Comprobación final de juntas y limpieza del perímetro.</p>
                 </div>
               </div>
-            </div>
+            </div>*/}
 
-            {/* Content box for Torres de cocina */}
+            {/* Content box for Torres de cocina 
             <div className="mb-8 md:mb-16 bg-white rounded-lg p-5 md:p-10 shadow-md md:shadow-lg border-l-4 border-teal-500 scroll-mt-20">
               <h3 className="text-xl md:text-2xl font-semibold mb-3">Torres de cocina</h3>
               <p className="text-gray-700 mb-4 text-base md:text-lg leading-relaxed">
@@ -266,6 +271,26 @@ const MontajeMueblesPage = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>*/}
+
+      {/* Galería real de montajes (scroll tipo tren) */}
+      <section className="py-10 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-5">Nuestra galería:</h2>
+          <p className="text-center text-gray-500 mb-6">Desliza para ver nuestros trabajos.</p>
+
+          <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+            <div className="flex gap-3 px-1">
+              <img src={montaje1} alt="Montaje real 1" className="w-64 h-48 object-cover rounded-lg flex-shrink-0" />
+              <img src={montaje2} alt="Montaje real 2" className="w-64 h-48 object-cover rounded-lg flex-shrink-0" />
+              <img src={montaje3} alt="Montaje real 3" className="w-64 h-48 object-cover rounded-lg flex-shrink-0" />
+              <img src={montaje4} alt="Montaje real 4" className="w-64 h-48 object-cover rounded-lg flex-shrink-0" />
+              <img src={montaje5} alt="Montaje real 5" className="w-64 h-48 object-cover rounded-lg flex-shrink-0" />
+            </div>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-14 bg-gradient-to-r from-gray-50"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-14 bg-gradient-to-l from-gray-50"></div>
           </div>
         </div>
       </section>
