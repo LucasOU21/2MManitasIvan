@@ -4,6 +4,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import montajeHero from './assets/cocina3.png';
+import montaje2 from './assets/cocina1.jpeg';
+import montaje5 from './assets/cocina1.jpg';
+import montaje1 from './assets/cocina3.jpeg';
+import montaje4 from './assets/isla.jpeg';
+import montaje3 from './assets/panelado.jpeg';
 
 const MontajeMueblesPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -48,10 +53,10 @@ const MontajeMueblesPage = () => {
           </button>
           <div className="max-w-3xl text-white">
             <h1 className={`text-4xl md:text-5xl font-bold mb-4 transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              Montaje profesional de Cocinas
+              Tu cocina ideal, lista sin complicaciones
             </h1>
             <p className={`text-lg md:text-xl mb-6 transition-all duration-700 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              Montamos desde muebles básicos hasta complejos armarios o cocinas. Rápido y sin preocupaciones.
+              Montamos tu cocina con cuidado y rapidez, desde muebles sencillos hasta diseños completos. Disfruta del proceso sin estrés.
             </p>
             <div className={`flex gap-3 transition-all duration-700 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <button 
@@ -78,11 +83,11 @@ const MontajeMueblesPage = () => {
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Expertos en Cocinas</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Todo lo que montamos para tu cocina</h2>
             <div className="text-center mb-6 max-w-3xl mx-auto">
-              <p className="text-base md:text-lg text-gray-700 mb-4">
+               {/*<p className="text-base md:text-lg text-gray-700 mb-4">
                 En Manitas 2M nos encargamos del montaje de muebles altos, bajos y todo tipo de accesorios de cocina de todas las tiendas, asegurando un trabajo rápido, seguro y con acabado profesional que se adapta a tu espacio y necesidades.
-              </p>
+              </p>*/}
             </div>
             
             {/* Service feature boxes */}
@@ -131,10 +136,10 @@ const MontajeMueblesPage = () => {
                   <h4 className="font-medium text-teal-700 text-base md:text-lg mb-1">Qué garantizamos</h4>
                   <p className="text-gray-600 text-sm md:text-base leading-relaxed">Anclaje estructural, mecanismos de elevación regulados, ajuste de holguras y nivelación.</p>
                 </div>
-                <div className="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm md:shadow-md">
+                 {/*<div className="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm md:shadow-md">
                   <h4 className="font-medium text-teal-700 text-base md:text-lg mb-1">Resultado</h4>
                   <p className="text-gray-600 text-sm md:text-base leading-relaxed">Puertas seguras, apertura cómoda y acabado alineado con el resto de la cocina.</p>
-                </div>
+                </div>*/}
               </div>
             </div>
 
@@ -153,10 +158,10 @@ const MontajeMueblesPage = () => {
                   <h4 className="font-medium text-teal-700 text-base md:text-lg mb-1">Detalles</h4>
                   <p className="text-gray-600 text-sm md:text-base leading-relaxed">Anclaje seguro a la pared, ajuste de puertas y guías, instalación de herrajes de cierre lento si se solicita.</p>
                 </div>
-                <div className="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm md:shadow-md">
+                {/*<div className="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm md:shadow-md">
                   <h4 className="font-medium text-teal-700 text-base md:text-lg mb-1">Beneficio</h4>
                   <p className="text-gray-600 text-sm md:text-base leading-relaxed">Apertura suave, aprovechamiento máximo del espacio y alineado perfecto con la encimera.</p>
-                </div>
+                </div>*/}
               </div>
             </div>
 
@@ -175,14 +180,14 @@ const MontajeMueblesPage = () => {
                   <h4 className="font-medium text-teal-700 text-base md:text-lg mb-1">Qué hacemos</h4>
                   <p className="text-gray-600 text-sm md:text-base leading-relaxed">Corte a medida, unión y sellado hidrófugo, nivelado, remates y colocación de copetes, salpicadero y cantos.</p>
                 </div>
-                <div className="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm md:shadow-md">
+                {/*<div className="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm md:shadow-md">
                   <h4 className="font-medium text-teal-700 text-base md:text-lg mb-1">Ventaja</h4>
                   <p className="text-gray-600 text-sm md:text-base leading-relaxed">Acabados sin fugas ni desniveles, unión invisible y resistencia a uso diario.</p>
                 </div>
                 <div className="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm md:shadow-md">
                   <h4 className="font-medium text-teal-700 text-base md:text-lg mb-1">Garantía de calidad</h4>
                   <p className="text-gray-600 text-sm md:text-base leading-relaxed">Comprobación final de juntas y limpieza del perímetro.</p>
-                </div>
+                </div>*/}
               </div>
             </div>
 
@@ -201,12 +206,32 @@ const MontajeMueblesPage = () => {
                   <h4 className="font-medium text-teal-700 text-base md:text-lg mb-1">Instalación</h4>
                   <p className="text-gray-600 text-sm md:text-base leading-relaxed">Fijación a pared, refuerzo interior o modificación si es necesario, y ajuste de frentes para un aspecto uniforme.</p>
                 </div>
-                <div className="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm md:shadow-md">
+                 {/*<div className="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm md:shadow-md">
                   <h4 className="font-medium text-teal-700 text-base md:text-lg mb-1">Valor añadido</h4>
                   <p className="text-gray-600 text-sm md:text-base leading-relaxed">Optimizamos accesos y ventilaciones para electrodomésticos integrados.</p>
-                </div>
+                </div>*/}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+{/* Galería real de montajes (scroll tipo tren) */}
+      <section className="py-10 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-5">Nuestra galería:</h2>
+          <p className="text-center text-gray-500 mb-6">Desliza para ver nuestros trabajos.</p>
+
+          <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+            <div className="flex gap-3 px-1">
+              <img src={montaje1} alt="Montaje real 1" className="w-64 h-48 object-cover rounded-lg flex-shrink-0" />
+              <img src={montaje2} alt="Montaje real 2" className="w-64 h-48 object-cover rounded-lg flex-shrink-0" />
+              <img src={montaje3} alt="Montaje real 3" className="w-64 h-48 object-cover rounded-lg flex-shrink-0" />
+              <img src={montaje4} alt="Montaje real 4" className="w-64 h-48 object-cover rounded-lg flex-shrink-0" />
+              <img src={montaje5} alt="Montaje real 5" className="w-64 h-48 object-cover rounded-lg flex-shrink-0" />
+            </div>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-14 bg-gradient-to-r from-gray-50"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-14 bg-gradient-to-l from-gray-50"></div>
           </div>
         </div>
       </section>
