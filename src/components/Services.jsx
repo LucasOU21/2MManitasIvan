@@ -41,7 +41,7 @@ const services = [
     path: "/puertas",
     hasPage: true
   },
-  /*{
+  {
     title: "Albañilería",
     description: "Servicios profesionales de construcción y reforma",
     image: albanileriaImg1,
@@ -49,7 +49,7 @@ const services = [
     path: "/albanileria",
     hasPage: true
   },
-  {
+ /*{
     title: "Plato de Ducha",
     description: "Instalación y reforma de platos de ducha",
     image: platoDuchaImg1,

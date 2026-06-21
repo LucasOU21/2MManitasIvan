@@ -37,12 +37,12 @@ const AboutUs = () => {
             </h1>
             <p className="text-xl text-gray-600 mb-10 leading-relaxed">
               En 2M Manitas Madrid nos dedicamos a ayudarte con esos trabajos del hogar que necesitan hacerse bien, con orden y sin complicaciones. 
-              Realizamos montaje de muebles, cocinas, carpintería y pequeños trabajos de instalación en Madrid, siempre con un enfoque claro: ofrecer un servicio rápido, profesional y de confianza.
+              Realizamos montaje de muebles, cocinas, carpintería y pequeños trabajos de instalación y albañilería en Madrid.
             </p>
                           
             <p className="text-lg text-gray-600 leading-relaxed">
               Sabemos que cuando alguien entra en tu casa, no solo valoras que haga bien el trabajo, sino también la puntualidad, la limpieza, el trato y el cuidado de cada detalle.
-              Por eso trabajamos para que cada montaje o instalación quede bien terminado, funcional y listo para usar.
+              Por eso trabajamos para que cada servicio quede bien terminado, funcional y listo para usar.
             </p>
 
             <p className= "text-lg text-gray-600 mb-10 leading-relaxed">

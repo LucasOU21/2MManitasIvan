@@ -15,9 +15,9 @@ const Header = () => {
     {title: "Tarima", path: "/tarima" },
     { title: "Pladur", path: "/pladur" },
     { title: "Mudanzas", path: "/mudanzas" },
-    /*{ title: "Electricidad", path: "/electricidad" },
+    /*{ title: "Electricidad", path: "/electricidad" },*/
     { title: "Albañilería", path: "/albanileria" },
-    { title: "Plato de Ducha", path: "/plato-ducha" },*/
+    /*{ title: "Plato de Ducha", path: "/plato-ducha" },*/
     /*{ title: "Pintura", path: "/pintura" },*/ 
   ];
   
