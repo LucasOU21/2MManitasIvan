@@ -1,10 +1,10 @@
 import React from "react";
 import video_cocinas1 from "../assets/video_cocinas1.mp4";
 import video_cocinas2 from "../assets/video_cocinas2.mp4";
-import HOME1 from "../assets/home1.png";
-import HOME2 from "../assets/home2.png";
-import HOME3 from "../assets/home3.png";
-import HOME4 from "../assets/home4.png";
+import HOME1 from "../assets/HOME1.png";
+import HOME2 from "../assets/HOME2.png";
+import HOME3 from "../assets/HOME3.png";
+import HOME4 from "../assets/HOME4.png";
 
 
 const AboutUs = () => {
