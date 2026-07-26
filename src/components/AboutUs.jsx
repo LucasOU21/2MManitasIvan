@@ -16,7 +16,7 @@ const AboutUs = () => {
     },
     {
       type: "video",
-      src: video_cocinas1,
+      src: /*video_cocinas1*/,
     },
     {
       type: "image",
@@ -30,7 +30,7 @@ const AboutUs = () => {
     },
     {
       type: "video",
-      src: video_cocinas2,
+      src: /*video_cocinas2*/,
     },
     {
       type: "image",
