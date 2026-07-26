@@ -10,13 +10,13 @@ const Header = () => {
   // Full list of services for the dropdown
   const services = [
     { title: "Montaje de Cocinas", path: "/cocinas" },
-    { title: "Montaje de Muebles", path: "/montaje" },
-    { title: "Instalación de Puertas", path: "/puertas" },
-    {title: "Tarima", path: "/tarima" },
-    { title: "Pladur", path: "/pladur" },
-    { title: "Mudanzas", path: "/mudanzas" },
-    /*{ title: "Electricidad", path: "/electricidad" },*/
-    { title: "Albañilería", path: "/albanileria" },
+    /*{ title: "Montaje de Muebles", path: "/montaje" },*/
+    { title: "Montaje de Puertas", path: "/puertas" },
+    {title: "Montaje de Tarimas", path: "/tarima" },
+    /*{ title: "Pladur", path: "/pladur" },
+    { title: "Mudanzas", path: "/mudanzas" },*/
+    /*{ title: "Electricidad", path: "/electricidad" },
+    { title: "Albañilería", path: "/albanileria" },*/
     /*{ title: "Plato de Ducha", path: "/plato-ducha" },*/
     /*{ title: "Pintura", path: "/pintura" },*/ 
   ];

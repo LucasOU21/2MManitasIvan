@@ -19,29 +19,29 @@ import montajeImg1 from '../assets/montaje.muebles.jpg';
 const services = [
   {
     title: "Montaje de Cocinas",
-    description: "Montaje rápido, limpio y con acabados de calidad",
+    description: "Montamos tu cocina de IKEA, Leroy Merlin, Conforama, Amazon, Bricodepot, entre otras tiendas, adaptándonos a cada sistema de montaje e instrucciones específicas de cada marca.",
     image: cocinasImg1,
     details: "Nos encargamos del montaje e instalación completa de tu cocina.",
     path: "/cocinas",
     hasPage: true
   },
-  {
+/*{
     title: "Montaje de Muebles",
     description: "Montaje de muebles de IKEA o cualquier otra tienda",
     image: montajeImg1,
     details: "Servicio especializado en montaje de cocinas y muebles de Ikea, Leroy Merlin y otras tiendas.",
     path: "/montaje",
     hasPage: true
-  },
+  },*/
   {
-    title: "Instalación de Puertas",
-    description: "Servicio de instalación de puertas interiores y exteriores",
+    title: "Montaje de Puertas",
+    description: " Montamos puertas de interior y exterior compradas en Obramat, Leroy Merlin y otras tiendas, adaptándonos a cada sistema de bisagras, marcos y acabados.",
     image: puertasImg1,
     details: "Nos encargamos del montaje, ajuste y nivelado de la puerta",
     path: "/puertas",
     hasPage: true
   },
-  {
+  /*{
     title: "Albañilería",
     description: "Servicios profesionales de construcción y reforma",
     image: albanileriaImg1,
@@ -49,7 +49,7 @@ const services = [
     path: "/albanileria",
     hasPage: true
   },
- /*{
+ {
     title: "Plato de Ducha",
     description: "Instalación y reforma de platos de ducha",
     image: platoDuchaImg1,
@@ -58,14 +58,14 @@ const services = [
     hasPage: true
   },*/
   {
-    title: "Tarima",
-    description: "Instalación de tarimas y rodapiés",
+    title: "Montaje de Tarimas",
+    description: "Montamos tarimas de todo tipo de calidades, colores y grosores, incluyendo tarima de PVC (vinílica) apta para cocinas y zonas húmedas.",
     image: tarimaImg1,
     details: "Instalación profesional de tarimas flotantes, macizas y rodapiés.",
     path: "/tarima",
     hasPage: true
   },
-  {
+  /*{
     title: "Pladur",
     description: "Trabajos de construcción en pladur",
     image: pladurImg1,

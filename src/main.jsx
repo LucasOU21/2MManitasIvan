@@ -15,15 +15,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/mudanzas" element={<MudanzasPage />} />
+        {/*<Route path="/mudanzas" element={<MudanzasPage />} />*/}
         {/* Placeholder routes for other services - replace with actual components as you create them */}
-        <Route path="/montaje" element={<Montaje serviceName = "Montaje de Muebles"/>} /> 
+        {/*<Route path="/montaje" element={<Montaje serviceName = "Montaje de Muebles"/>} /> */}
         <Route path="/cocinas" element={<Cocinas serviceName = "Cocinas"/>} />
-        {/*<Route path="/electricidad" element={<ServicePlaceholder serviceName="Electricidad" />} />*/
-        <Route path="/albanileria" element={<ServicePlaceholder serviceName="Albañilería" />} />
-        /*<Route path="/plato-ducha" element={<ServicePlaceholder serviceName="Plato de Ducha" />} />*/}
+        {/*<Route path="/electricidad" element={<ServicePlaceholder serviceName="Electricidad" />} />*/}
+        {/*<Route path="/albanileria" element={<ServicePlaceholder serviceName="Albañilería" />} />*/}
+        {/*<Route path="/plato-ducha" element={<ServicePlaceholder serviceName="Plato de Ducha" />} />*/}
         <Route path="/tarima" element={<ServicePlaceholder serviceName="Tarima" />} />
-        <Route path="/pladur" element={<ServicePlaceholder serviceName="Pladur" />} />
+        {/*<Route path="/pladur" element={<ServicePlaceholder serviceName="Pladur" />} />*/}
         {/*<Route path="/pintura" element={<ServicePlaceholder serviceName="Pintura" />} />*/}
         <Route path="/puertas" element={<Puertas/>} />
       </Routes>

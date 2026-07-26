@@ -39,7 +39,7 @@ const Hero = () => {
                 isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              Carpintería y Albañilería en Madrid
+              Montadores Profesionales en Madrid
             </h2>
             <p 
               className={`text-lg mb-8 transition-all duration-700 delay-300 ease-out ${
