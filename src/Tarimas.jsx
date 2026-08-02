@@ -201,7 +201,7 @@ const Tarimas = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <img src={tarimaHero} alt="Instalación de tarima 1" className="w-full h-64 object-cover rounded-lg shadow-md" />
-            <img src={tarimaHero} alt="Instalación de tarima 2" className="w-full h-64 object-cover rounded-lg shadow-md" />
+            <img src={tarimaGaleria} alt="Instalación de tarima 2" className="w-full h-64 object-cover rounded-lg shadow-md" />
           </div>
         </div>
       </section>

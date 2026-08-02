@@ -4,6 +4,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import puertasHero from './assets/puerta-1.jpg';
+import puertas1 from './assets/puertas1.jpg';
+import puertas2 from './assets/puertas2.jpg';
 
 const Puertas = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -225,6 +227,19 @@ const Puertas = () => {
           </div>
         </div>
       </section>
+
+        {/* Galería */}
+            <section className="py-10 bg-gray-50">
+              <div className="container mx-auto px-4 max-w-5xl">
+                <h2 className="text-2xl md:text-3xl font-semibold text-center mb-5">Algunos de nuestros trabajos</h2>
+                <p className="text-center text-gray-500 mb-6">Acabados cuidados e instalaciones realizadas con detalle.</p>
+      
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <img src={puertas1} alt="Instalación de puerta 1" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                  <img src={puertas2} alt="Instalación de puerta 2" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                </div>
+              </div>
+            </section>
 
       {/* ¿Cómo funciona? */}
       <section className="py-12 bg-white">
