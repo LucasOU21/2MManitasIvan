@@ -242,10 +242,10 @@ const MontajeMueblesPage = () => {
                 <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">¿Por qué elegirnos?</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                   {[
-                    'Montamos tarimas de todas las calidades, tiendas y grosores',
-                    'Instalación limpia, ordenada y con acabado profesional',
-                    'Equipo con experiencia en diferentes tipos de suelos y remates',
-                    'Presupuestos claros y atención cercana'
+                    'Montamos cocinas de IKEA, Leroy Merlin, Obramat, Brico Depôt y otras marcas',
+                    'Instalación precisa con herramientas profesionales incluidas',
+                    'Ajuste de muebles, puertas, cajones y herrajes para un acabado perfecto',
+                   'Presupuestos claros, atención cercana y compromiso con los plazos'
                   ].map((text, idx) => (
                     <div key={idx} className="flex items-start space-x-3">
                       <ShieldCheck className="text-teal-500" size={20} />
