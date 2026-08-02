@@ -62,7 +62,7 @@ const services = [
     description: "Montamos tarimas de todo tipo de calidades, colores y grosores, incluyendo tarima de PVC (vinílica) apta para cocinas y zonas húmedas.",
     image: tarimaImg1,
     details: "Instalación profesional de tarimas flotantes, macizas y rodapiés.",
-    path: "/tarima",
+    path: "/tarimas",
     hasPage: true
   },
   /*{

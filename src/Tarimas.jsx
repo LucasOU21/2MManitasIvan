@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, MessageCircle, ArrowLeft, ShieldCheck, Clock, PackageCheck } from 'lucide-react';
+import { Phone, MessageCircle, ArrowLeft, ShieldCheck, Clock, PackageCheck, Ruler, Hammer } from 'lucide-react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
-import puertasHero from './assets/puerta-1.jpg';
+import tarimaHero from './assets/Tarima1.jpg';
+import tarimaGaleria from './assets/Tarima2.jpg';
 
-const Puertas = () => {
+const Tarimas = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const phoneNumber = '625791624';
   const countryCode = '34';
@@ -25,7 +26,7 @@ const Puertas = () => {
   };
 
   const handleBackClick = () => {
-    window.location.href = "/";
+    window.location.href = '/';
   };
 
   const scrollToSection = (sectionId) => {
@@ -48,7 +49,7 @@ const Puertas = () => {
       {/* Hero */}
       <section className="relative pt-16 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src={puertasHero} alt="Instalación de puertas" className="w-full h-full object-cover" />
+          <img src={tarimaHero} alt="Montaje de tarimas" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black opacity-60"></div>
         </div>
 
@@ -62,10 +63,10 @@ const Puertas = () => {
 
           <div className="max-w-3xl text-white">
             <h1 className={`text-4xl md:text-5xl font-bold mb-4 transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              Montaje de puertas
+              Montaje de tarimas profesional
             </h1>
             <p className={`text-lg md:text-xl mb-6 transition-all duration-700 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              Instalamos, cambiamos y ajustamos puertas de interior, de paso y entrada en Madrid.
+              Montamos tarimas de todas las calidades, tiendas y grosores, con acabados limpios, precisos y duraderos.
             </p>
             <div className={`flex gap-3 transition-all duration-700 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <button onClick={handlePhoneClick} className="bg-teal-500 text-white px-6 py-3 rounded-full hover:bg-teal-600 flex items-center hover:scale-105 transition text-sm md:text-base">
@@ -82,25 +83,23 @@ const Puertas = () => {
       {/* ¿Qué incluye nuestro servicio? */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
-            ¿Qué incluye nuestro servicio?
-          </h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">¿Qué incluye nuestro servicio?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 icon: <PackageCheck size={32} className="text-teal-500" />,
-                title: 'Instalación de puertas',
-                text: 'Instalamos puertas de entrada e interiores con acabado profesional.'
+                title: 'Instalación profesional',
+                text: 'Montaje limpio y preciso de tarimas flotantes, clic-clac o macizas.'
               },
               {
                 icon: <ShieldCheck size={32} className="text-teal-500" />,
-                title: 'Profesionales experimentados',
-                text: 'Equipo capacitado en instalación de puertas, marcos y ajustes de precisión.'
+                title: 'Trabajo de calidad',
+                text: 'Trabajamos con cuidado para que el resultado quede perfecto y duradero.'
               },
               {
                 icon: <Clock size={32} className="text-teal-500" />,
                 title: 'Servicio rápido',
-                text: 'Trabajamos con rapidez y nos adaptamos a tus horarios.'
+                text: 'Nos adaptamos a tus tiempos y dejamos el espacio listo para usar.'
               }
             ].map((item, idx) => (
               <div key={idx} className="bg-gray-50 p-6 rounded-xl shadow-md text-center">
@@ -113,36 +112,35 @@ const Puertas = () => {
         </div>
       </section>
 
-      {/* Especialistas en puertas */}
+      {/* Tipos de tarimas */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-teal-600 mb-4 text-center">Especialistas en Puertas</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-teal-600 mb-4 text-center">Montamos todo tipo de tarimas</h2>
           <p className="text-lg text-center mb-10 text-gray-700">
-            Nos especializamos en la instalación, sustitución y ajuste de todo tipo de puertas. No fabricamos.
+            Instalamos tarimas de distintas calidades, tiendas y grosores para dar con la mejor opción para cada espacio.
           </p>
 
-          {/* Service feature boxes - clicables */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mb-8 md:mb-10">
             {[
               {
-                id: 'entrada',
-                icon: <PackageCheck size={20} className="text-teal-500 md:w-6 md:h-6" />,
-                label: 'Puertas de Entrada'
+                id: 'flotantes',
+                icon: <Ruler size={20} className="text-teal-500 md:w-6 md:h-6" />,
+                label: 'Tarimas Flotantes'
               },
               {
-                id: 'interiores',
+                id: 'clic',
+                icon: <Hammer size={20} className="text-teal-500 md:w-6 md:h-6" />,
+                label: 'Tarimas Clic-Clac'
+              },
+              {
+                id: 'macizas',
+                icon: <PackageCheck size={20} className="text-teal-500 md:w-6 md:h-6" />,
+                label: 'Tarimas Macizas'
+              },
+              {
+                id: 'rodapies',
                 icon: <ShieldCheck size={20} className="text-teal-500 md:w-6 md:h-6" />,
-                label: 'Puertas Interiores'
-              },
-              {
-                id: 'armarios',
-                icon: <PackageCheck size={20} className="text-teal-500 md:w-6 md:h-6" />,
-                label: 'Puertas Armarios'
-              },
-              {
-                id: 'tapetas',
-                icon: <Clock size={20} className="text-teal-500 md:w-6 md:h-6" />,
-                label: 'Tapetas'
+                label: 'Rodapiés'
               }
             ].map((item) => (
               <button
@@ -158,64 +156,66 @@ const Puertas = () => {
             ))}
           </div>
 
-          {/* Secciones de detalle */}
-          <div id="entrada" className="mb-8 md:mb-16 bg-white rounded-lg p-5 md:p-10 shadow-md md:shadow-lg border-l-4 border-teal-500 scroll-mt-20">
-            <h3 className="text-xl md:text-2xl font-semibold text-teal-700 mb-4">Puertas de Entrada</h3>
+          <div id="flotantes" className="mb-8 md:mb-16 bg-white rounded-lg p-5 md:p-10 shadow-md md:shadow-lg border-l-4 border-teal-500 scroll-mt-20">
+            <h3 className="text-xl md:text-2xl font-semibold text-teal-700 mb-4">Tarimas flotantes</h3>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li>Instalación de puertas de entrada seguras y duraderas.</li>
-              <li>Trabajamos con puertas blindadas, acorazadas, de madera, aluminio y PVC.</li>
-              <li>Desmontaje de puerta antigua.</li>
-              <li>Instalación de marcos y tapetas.</li>
-              <li>Colocación de cerraduras de seguridad y bisagras.</li>
-              <li>Ajustes de precisión y acabados profesionales.</li>
+              <li>Instalación rápida y limpia, ideal para reformas y cambios de uso.</li>
+              <li>Montamos modelos de distintas calidades y grosores según el espacio.</li>
+              <li>Perfectas para salas, dormitorios y ambientes con un acabado moderno.</li>
             </ul>
           </div>
 
-          <div id="interiores" className="mb-8 md:mb-16 bg-white rounded-lg p-5 md:p-10 shadow-md md:shadow-lg border-l-4 border-teal-500 scroll-mt-20">
-            <h3 className="text-xl md:text-2xl font-semibold text-teal-700 mb-4">Puertas Interiores</h3>
+          <div id="clic" className="mb-8 md:mb-16 bg-white rounded-lg p-5 md:p-10 shadow-md md:shadow-lg border-l-4 border-teal-500 scroll-mt-20">
+            <h3 className="text-xl md:text-2xl font-semibold text-teal-700 mb-4">Tarimas clic-clac</h3>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li>Instalación de puertas interiores con acabado profesional.</li>
-              <li>Trabajamos con puertas de madera maciza, placas y modernas.</li>
-              <li>Ajuste de marcos a medida.</li>
-              <li>Regulación de bisagras.</li>
-              <li>Colocación de herrajes y tapetas.</li>
-              <li>Desmontaje de puerta antigua.</li>
+              <li>Montaje sencillo y sin necesidad de grandes preparaciones previas.</li>
+              <li>Ideal para viviendas, oficinas y zonas donde se busca practicidad.</li>
             </ul>
           </div>
 
-          <div id="armarios" className="mb-8 md:mb-16 bg-white rounded-lg p-5 md:p-10 shadow-md md:shadow-lg border-l-4 border-teal-500 scroll-mt-20">
-            <h3 className="text-xl md:text-2xl font-semibold text-teal-700 mb-4">Puertas de Armarios</h3>
+          <div id="macizas" className="mb-8 md:mb-16 bg-white rounded-lg p-5 md:p-10 shadow-md md:shadow-lg border-l-4 border-teal-500 scroll-mt-20">
+            <h3 className="text-xl md:text-2xl font-semibold text-teal-700 mb-4">Tarimas macizas</h3>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li>Instalación y ajuste de puertas de armarios y roperos.</li>
-              <li>Trabajamos con puertas abatibles y correderas.</li>
-              <li>Desmontaje e instalación de puertas.</li>
-              <li>Regulación de bisagras.</li>
-              <li>Alineación perfecta de puertas.</li>
-              <li>Sustitución de herrajes si es necesario.</li>
+              <li>Instalación precisa para un acabado más elegante y duradero.</li>
+              <li>Trabajamos con modelos de distintas calidades, tanto estándar como premium.</li>
+              <li>Recomendadas para quienes buscan un resultado más exclusivo.</li>
             </ul>
           </div>
 
-          <div id="tapetas" className="mb-8 md:mb-16 bg-white rounded-lg p-5 md:p-10 shadow-md md:shadow-lg border-l-4 border-teal-500 scroll-mt-20">
-            <h3 className="text-xl md:text-2xl font-semibold text-teal-700 mb-4">Sustitución de Tapetas</h3>
+          <div id="rodapies" className="mb-8 md:mb-16 bg-white rounded-lg p-5 md:p-10 shadow-md md:shadow-lg border-l-4 border-teal-500 scroll-mt-20">
+            <h3 className="text-xl md:text-2xl font-semibold text-teal-700 mb-4">Rodapiés y remates</h3>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li>Sustituimos tapetas desgastadas o dañadas.</li>
-              <li>Trabajamos con tapetas de madera, melamina y lacadas.</li>
-              <li>Puerta renovada sin necesidad de cambiar toda la puerta.</li>
+              <li>Corte y colocación de rodapiés para un acabado perfecto.</li>
+              <li>Completamos la instalación para que la tarima quede visualmente impecable.</li>
+              <li>Trabajamos con precisión para que la transición entre suelos y paredes sea limpia.</li>
             </ul>
           </div>
         </div>
       </section>
 
-      {/* Beneficios destacados */}
-      <section className="py-12 bg-gray-50">
+      {/* Galería */}
+      <section className="py-10 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-5">Algunos de nuestros trabajos</h2>
+          <p className="text-center text-gray-500 mb-6">Acabados cuidados y instalaciones realizadas con detalle.</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <img src={tarimaHero} alt="Instalación de tarima 1" className="w-full h-64 object-cover rounded-lg shadow-md" />
+            <img src={tarimaHero} alt="Instalación de tarima 2" className="w-full h-64 object-cover rounded-lg shadow-md" />
+          </div>
+        </div>
+      </section>
+
+      {/* ¿Por qué elegirnos? */}
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">¿Por qué elegirnos?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
-              "Instalación profesional y precisa",
-              "Presupuestos sin compromiso y cerrados",
-              "Amplia experiencia en todo tipo de puertas",
-              "Servicio rápido, limpio y eficiente"
+              'Montamos tarimas de todas las calidades, tiendas y grosores',
+              'Instalación limpia, ordenada y con acabado profesional',
+              'Equipo con experiencia en diferentes tipos de suelos y remates',
+              'Presupuestos claros y atención cercana'
             ].map((text, idx) => (
               <div key={idx} className="flex items-start space-x-3">
                 <ShieldCheck className="text-teal-500" size={20} />
@@ -227,23 +227,23 @@ const Puertas = () => {
       </section>
 
       {/* ¿Cómo funciona? */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">¿Cómo funciona?</h2>
           <ol className="list-decimal list-inside space-y-4 text-gray-700 text-lg">
-            <li>Contáctanos por teléfono o WhatsApp y describe tu necesidad.</li>
-            <li>Te damos un presupuesto personalizado sin compromiso.</li>
-            <li>Agendamos día y hora según tu disponibilidad.</li>
-            <li>Realizamos la instalación, sustitución o ajuste con profesionalidad.</li>
+            <li>Contáctanos por teléfono o WhatsApp y cuéntanos qué tipo de tarima necesitas.</li>
+            <li>Te orientamos sobre la mejor opción según calidad, grosor y espacio.</li>
+            <li>Agendamos la instalación en el momento más adecuado para ti.</li>
+            <li>Montamos la tarima y dejamos el resultado impecable.</li>
           </ol>
         </div>
       </section>
 
-      {/* CTA personalizado */}
+      {/* CTA */}
       <section className="py-16 bg-teal-600 text-white text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">¿Necesitas instalar, cambiar o ajustar una puerta?</h2>
-          <p className="text-lg mb-6">Solicita tu presupuesto gratuito. Te responderemos en menos de 24h.</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">¿Quieres instalar una tarima nueva?</h2>
+          <p className="text-lg mb-6">Solicita tu presupuesto sin compromiso y te ayudamos a elegir la mejor opción.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button onClick={handlePhoneClick} className="bg-white text-teal-600 px-6 py-3 rounded-full font-medium hover:bg-teal-50 flex items-center justify-center transition-all duration-300 hover:shadow-lg">
               <Phone className="mr-2" /> Llamar ahora
@@ -261,4 +261,4 @@ const Puertas = () => {
   );
 };
 
-export default Puertas;
+export default Tarimas;

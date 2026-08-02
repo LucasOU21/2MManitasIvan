@@ -12,7 +12,7 @@ const Header = () => {
     { title: "Montaje de Cocinas", path: "/cocinas" },
     /*{ title: "Montaje de Muebles", path: "/montaje" },*/
     { title: "Montaje de Puertas", path: "/puertas" },
-    {title: "Montaje de Tarimas", path: "/tarima" },
+    {title: "Montaje de Tarimas", path: "/tarimas" },
     /*{ title: "Pladur", path: "/pladur" },
     { title: "Mudanzas", path: "/mudanzas" },*/
     /*{ title: "Electricidad", path: "/electricidad" },
