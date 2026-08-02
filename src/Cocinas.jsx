@@ -236,6 +236,26 @@ const MontajeMueblesPage = () => {
         </div>
       </section>
 
+            {/* ¿Por qué elegirnos? */}
+            <section className="py-12 bg-white">
+              <div className="container mx-auto px-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">¿Por qué elegirnos?</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                  {[
+                    'Montamos tarimas de todas las calidades, tiendas y grosores',
+                    'Instalación limpia, ordenada y con acabado profesional',
+                    'Equipo con experiencia en diferentes tipos de suelos y remates',
+                    'Presupuestos claros y atención cercana'
+                  ].map((text, idx) => (
+                    <div key={idx} className="flex items-start space-x-3">
+                      <ShieldCheck className="text-teal-500" size={20} />
+                      <p className="text-gray-700">{text}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
       {/* ¿Cómo funciona? */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
