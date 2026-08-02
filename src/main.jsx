@@ -9,7 +9,7 @@ import Cocinas from './Cocinas.jsx'
 import './index.css'
 import Puertas from './Puertas.jsx'
 import { Analytics } from "@vercel/analytics/react"
-
+import Tarimas from './Tarimas.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
@@ -22,7 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         {/*<Route path="/electricidad" element={<ServicePlaceholder serviceName="Electricidad" />} />*/}
         {/*<Route path="/albanileria" element={<ServicePlaceholder serviceName="Albañilería" />} />*/}
         {/*<Route path="/plato-ducha" element={<ServicePlaceholder serviceName="Plato de Ducha" />} />*/}
-        <Route path="/tarima" element={<ServicePlaceholder serviceName="Tarima" />} />
+        <Route path="/tarimas" element={<Tarimas serviceName="Tarima" />} />
         {/*<Route path="/pladur" element={<ServicePlaceholder serviceName="Pladur" />} />*/}
         {/*<Route path="/pintura" element={<ServicePlaceholder serviceName="Pintura" />} />*/}
         <Route path="/puertas" element={<Puertas/>} />
